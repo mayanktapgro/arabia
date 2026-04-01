@@ -17,9 +17,10 @@ export function BeforeAfterShowcase() {
         title="Real Results. Real People."
         description="An interactive before-and-after slider gives your visitors instant confidence and visually proves that the treatment journey works."
         align="center"
+        tone="dark"
       />
 
-      <div className="section-card relative mt-12 overflow-hidden rounded-[24px] p-4 sm:p-6">
+      <div className="relative mt-12 overflow-hidden rounded-[24px] border border-[rgba(201,166,70,0.16)] bg-[#EEE8DF] p-4 shadow-[0_18px_55px_rgba(121,95,49,0.1)] sm:p-6">
         {!loaded && <SkeletonBlock className="absolute inset-4 z-10 rounded-[20px]" />}
 
         <div className="relative overflow-hidden rounded-[20px]">
@@ -56,7 +57,7 @@ export function BeforeAfterShowcase() {
             </div>
           </div>
 
-          <div className="absolute left-5 top-5 rounded-full bg-black/45 px-4 py-2 text-sm text-white">
+          <div className="absolute left-5 top-5 rounded-full bg-[rgba(44,44,44,0.72)] px-4 py-2 text-sm text-white">
             Before
           </div>
           <div className="absolute right-5 top-5 rounded-full bg-[var(--gold)] px-4 py-2 text-sm font-semibold text-black">

@@ -1,64 +1,57 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { testimonials } from "@/data/landing-content";
 
 export function Testimonials() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = window.setInterval(() => {
-      setActiveIndex((current) => (current + 1) % testimonials.length);
-    }, 4200);
-
-    return () => window.clearInterval(interval);
-  }, []);
-
-  const active = testimonials[activeIndex];
-
   return (
-    <Reveal id="testimonials" className="section-shell">
+    <Reveal id="testimonials" className="mx-auto w-full max-w-[1440px] px-5 py-24 sm:px-8 lg:px-14">
       <SectionHeading
         eyebrow="Testimonials"
-        title="What our clients say"
-        description="Auto-rotating reviews keep the page moving and help reinforce social proof without adding clutter."
-        align="center"
+        title="Trusted by guests from across the region and beyond"
+        description="International clients return for the calm atmosphere, thoughtful care, and visible results delivered with a refined Arabic luxury sensibility."
+        tone="dark"
       />
 
-      <div className="testimonial-mask mx-auto mt-12 max-w-4xl">
-        <AnimatePresence mode="wait">
+      <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        {testimonials.map((item, index) => (
           <motion.article
-            key={active.name}
-            initial={{ opacity: 0, scale: 0.98, y: 12 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.98, y: -12 }}
-            transition={{ duration: 0.5 }}
-            className="section-card rounded-[28px] p-8 sm:p-10"
+            key={item.name}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ delay: index * 0.08, duration: 0.45 }}
+            className="rounded-[24px] border border-[rgba(201,166,70,0.18)] bg-[#EEE8DF] p-6 shadow-[0_18px_50px_rgba(122,98,57,0.1)]"
           >
-            <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-              <div className="flex items-center gap-4">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[rgba(201,161,74,0.3)] bg-[rgba(201,161,74,0.1)] text-xl font-semibold text-[var(--gold)]">
-                  {active.name
-                    .split(" ")
-                    .map((part) => part[0])
-                    .join("")}
-                </div>
-                <div>
-                  <p className="text-lg font-semibold text-white">{active.name}</p>
-                  <p className="text-sm text-[var(--muted)]">{active.role}</p>
-                </div>
+            <div className="flex items-center gap-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[linear-gradient(135deg,#C9A646,#EAC27A)] text-lg font-semibold text-white shadow-[0_12px_30px_rgba(201,166,70,0.22)]">
+                {item.name
+                  .split(" ")
+                  .map((part) => part[0])
+                  .join("")}
               </div>
-              <div className="text-[var(--gold)]">{"*".repeat(active.rating)}</div>
+              <div>
+                <p className="text-lg font-semibold text-[#2C2C2C]">{item.name}</p>
+                <p className="text-sm text-[#8C7760]">{item.country}</p>
+              </div>
             </div>
 
-            <p className="font-display mt-8 text-3xl leading-relaxed text-white">
-              &quot;{active.quote}&quot;
+            <div className="mt-5 flex items-center justify-between gap-4">
+              <p className="rounded-full bg-[#F5F2EC] px-3 py-1 text-xs uppercase tracking-[0.2em] text-[#A8821E]">
+                {item.treatment}
+              </p>
+              <p className="text-sm font-semibold tracking-[0.12em] text-[#A8821E]">
+                {Array.from({ length: item.rating }, () => "\u2605").join("")}
+              </p>
+            </div>
+
+            <p className="mt-5 text-sm leading-8 text-[#5F5142]">
+              &quot;{item.quote}&quot;
             </p>
           </motion.article>
-        </AnimatePresence>
+        ))}
       </div>
     </Reveal>
   );

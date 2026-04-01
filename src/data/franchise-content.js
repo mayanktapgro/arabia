@@ -1,70 +1,96 @@
-export const investStats = [
-  { value: "10,000+", label: "Customers served across network" },
-  { value: "15+", label: "Clinics with premium positioning" },
-  { value: "High ROI", label: "Model built for efficient growth" },
+export const franchiseHighlights = [
+  { value: "Dubai + Riyadh", label: "Premium franchise focus markets" },
+  { value: "India Master", label: "Master franchise opportunity available" },
+  { value: "ROI 8-12 Months", label: "Designed for fast commercial momentum" },
 ];
 
-export const benefits = [
+export const supportPillars = [
   {
-    title: "Marketing Support",
-    copy: "Launch campaigns, performance assets, creative systems, and local demand generation guidance.",
+    title: "Theme",
+    copy: "A premium Arabic luxury clinic identity, spatial styling, and branded guest experience system.",
   },
   {
-    title: "Doctor Training",
-    copy: "Structured onboarding and medical operations support for teams entering the category.",
+    title: "Technology",
+    copy: "AI-based clinic technology guidance, treatment workflows, and operational systems built for modern care.",
   },
   {
-    title: "Technology Access",
-    copy: "Guidance on treatment systems, brand standards, and premium service workflows.",
+    title: "Marketing",
+    copy: "Offers, counselling systems, campaign support, and AI-based customer support to help convert demand faster.",
   },
   {
-    title: "Location Assistance",
-    copy: "Support around site planning, high-value catchments, and spatial experience design.",
+    title: "Location Support",
+    copy: "Help with city selection, catchment understanding, layout thinking, and local launch positioning.",
+  },
+  {
+    title: "End-to-End Customer Support",
+    copy: "From pre-opening strategy to daily customer management support, we stay involved across the journey.",
+  },
+  {
+    title: "Staff Selection & Training",
+    copy: "Support for staff hiring, team selection, role planning, and premium service training before launch.",
   },
 ];
 
-export const investmentCards = [
-  { title: "Initial Investment", value: "$180K - $350K", caption: "Based on format, market, and clinic scope." },
-  { title: "ROI Timeline", value: "18 - 30 months", caption: "Projected ramp-up with disciplined operations." },
-  { title: "Space Requirement", value: "1,200 - 2,500 sq ft", caption: "Designed for premium reception and treatment rooms." },
-];
-
-export const processSteps = ["Apply", "Discussion", "Approval", "Setup", "Launch"];
-
-export const ownerStories = [
+export const businessModelCards = [
   {
-    name: "Omar Rahman",
-    title: "Dubai Franchise Partner",
-    quote: "We launched with a premium identity, strong support, and a model that felt operationally mature from day one.",
-    metric: "Revenue up 38% in year one",
+    title: "Franchise in Dubai, Riyadh",
+    value: "Premium city-ready model",
+    caption: "Designed for high-visibility, premium skincare and aesthetic demand zones.",
   },
   {
-    name: "Leena Farouk",
-    title: "Riyadh Franchise Partner",
-    quote: "The training, brand playbook, and marketing support gave us clarity through every stage of setup and launch.",
-    metric: "Break-even achieved in 16 months",
+    title: "Master Franchise for India",
+    value: "Scale opportunity",
+    caption: "Structured for operators who want territory-level growth, not just one clinic.",
+  },
+  {
+    title: "Space Requirement",
+    value: "1000-2500 sq ft",
+    caption: "Flexible enough for premium reception, treatment rooms, and consultation flow.",
+  },
+];
+
+export const processSteps = [
+  "Enquiry",
+  "Discussion",
+  "Market Mapping",
+  "Setup & Training",
+  "Launch",
+];
+
+export const operatorStories = [
+  {
+    title: "Operator promise",
+    headline: "Just attend the customer. Rest will be on us.",
+    copy:
+      "The model is positioned as a full support partnership where branding, technology, launch systems, and growth guidance are already structured for you.",
+  },
+  {
+    title: "Opening momentum",
+    headline: "Opening FOMO built into the launch plan",
+    copy:
+      "We shape the launch around premium visibility, strong offers, local buzz, and early trust signals so the clinic opens with attention and urgency.",
   },
 ];
 
 export const faqItems = [
   {
-    question: "What is the estimated franchise cost?",
+    question: "Which cities are the main focus right now?",
     answer:
-      "The initial range depends on market, footprint, and equipment mix, but the model is positioned in the premium clinic category.",
+      "The current positioning highlights franchise opportunities in Dubai and Riyadh, with a master franchise opportunity for India.",
   },
   {
-    question: "How long does ROI usually take?",
+    question: "What is the expected ROI window?",
     answer:
-      "Our mock investment model targets an 18 to 30 month timeline depending on local demand, execution quality, and treatment mix.",
+      "The model is presented with an 8 to 12 month ROI target depending on execution quality, market demand, and launch momentum.",
   },
   {
-    question: "Do you provide launch support?",
+    question: "Do you help with staffing and training?",
     answer:
-      "Yes. The concept includes onboarding, training, operational setup, and coordinated marketing support.",
+      "Yes. Staff selection, team planning, and staff training are part of the end-to-end support structure.",
   },
   {
-    question: "What kind of partner are you looking for?",
+    question: "What size space is required?",
     answer:
-      "We are looking for operators with a premium mindset, local market understanding, and commitment to service excellence.",
+      "The recommended footprint is between 1000 and 2500 square feet, depending on city, format, and treatment mix.",
   },
 ];

@@ -15,7 +15,7 @@ export default function FranchisePage() {
     <>
       <SiteNavbar />
       <FloatingActionButton href="#franchise-form" label="Apply Now" />
-      <main>
+      <main className="bg-[linear-gradient(180deg,#FFF7F5_0%,#FCEBE5_38%,#F8E2DB_100%)] text-[#2C2C2C]">
         <FranchiseHero />
         <WhyInvest />
         <FranchiseBenefits />

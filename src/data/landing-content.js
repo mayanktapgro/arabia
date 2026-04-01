@@ -1,109 +1,120 @@
-export const heroStats = [
-  { value: "10,000+", label: "Happy Clients" },
-  { value: "4.9*", label: "Average Rating" },
-  { value: "15+", label: "Clinics" },
-];
-
-export const trustBadges = [
-  "Certified Dermatologists",
-  "FDA Approved Technology",
-  "10K+ Clients",
-  "Luxury Care Standards",
-  "Medical Grade Protocols",
-];
-
-export const services = [
+export const heroSlides = [
   {
-    title: "Laser Hair Removal",
+    id: "rejuvenation",
+    eyebrow: "Noor Rejuvenation Ritual",
+    title: "Arabic-inspired skin rejuvenation with modern clinical care",
     description:
-      "Precision-led treatments for smooth skin with comfort-focused cooling technology.",
+      "Restore glow, softness, and confidence through premium skin rituals designed under warm light, precision protocols, and elegant hospitality.",
+    primaryCta: "Book Appointment",
+    secondaryCta: "Explore Treatments",
+    backgroundImage: "/images/hero-banner-1.jpg",
+    image: "/images/hero1.jpeg",
+  },
+  {
+    id: "laser",
+    eyebrow: "Precision Laser Sessions",
+    title: "Advanced laser treatments for smoother, clearer, more refined skin",
+    description:
+      "From hair removal to photofacial correction, our treatments pair visible results with a calm, elevated clinic experience.",
+    primaryCta: "Book Appointment",
+    secondaryCta: "Explore Treatments",
+    backgroundImage: "/images/hero-banner-2.jpg",
     image: "/images/hair-removal.jpeg",
   },
   {
-    title: "Hydrafacial",
+    id: "facial",
+    eyebrow: "Advanced Facial Care",
+    title: "Hydration, tightening, and facial therapies designed for luminous results",
     description:
-      "Deep cleansing, hydration, and instant glow designed for busy premium lifestyles.",
+      "Luxury facials, brightening care, and age-support treatments tailored for guests seeking visible transformation without losing softness.",
+    primaryCta: "Book Appointment",
+    secondaryCta: "Explore Treatments",
+    backgroundImage: "/images/hero-banner-3.jpg",
+    image: "/images/hydrafacial.jpeg",
+  },
+];
+
+export const topServices = [
+  {
+    title: "Laser Hair Removal",
+    description: "Long-lasting smoothness powered by high-precision cooling systems.",
+    image: "/images/hair-removal.jpeg",
+  },
+  {
+    title: "Laser Photofacial",
+    description: "Targets dullness, pigmentation, and uneven tone with controlled light energy.",
+    image: "/images/hero2.jpeg",
+  },
+  {
+    title: "Hydrafacial",
+    description: "Deep cleansing, hydration, and refined texture in one signature session.",
     image: "/images/hydrafacial.jpeg",
   },
   {
-    title: "Anti-Aging",
-    description:
-      "Science-backed rejuvenation programs that soften lines and restore skin vitality.",
-    image: "/images/antiaging.jpg",
+    title: "Skin Tightening (HIFU)",
+    description: "Firming support for lifted contours and smoother, youthful-looking skin.",
+    image: "/images/hifu-treatment.jpeg",
   },
   {
-    title: "Acne Treatment",
-    description:
-      "Targeted treatment plans for active acne, texture, and post-acne recovery care.",
-    image: "/images/acne-treatment.jpg",
+    title: "Chemical Peel / Brightening",
+    description: "Exfoliating treatment plans that reveal clarity, softness, and radiance.",
+    image: "/images/chemical-peels.jpeg",
   },
 ];
 
-export const journeySteps = [
-  {
-    title: "Consultation",
-    copy: "Meet a specialist who understands your goals, medical history, and skin concerns.",
-  },
-  {
-    title: "Skin Analysis",
-    copy: "We evaluate condition, tone, sensitivity, and treatment suitability with care.",
-  },
-  {
-    title: "Treatment Plan",
-    copy: "Receive a personalized pathway that balances science, comfort, and visible outcomes.",
-  },
-  {
-    title: "Visible Results",
-    copy: "Track progress over time with before-and-after comparison and aftercare guidance.",
-  },
-];
+export const highDemandFeature = {
+  title: "The most requested skin clinic rituals, curated in one place",
+  description:
+    "A blend of precision aesthetics and warm Arabian hospitality, designed for clients seeking confidence, comfort, and refined visible results.",
+  image: "/images/hero2.jpeg",
+};
 
-export const reasons = [
+export const highDemandCards = [
   {
-    title: "Expert Dermatologists",
-    copy: "Board-certified specialists and trained skin therapists guide every treatment decision.",
+    title: "Laser Hair Removal",
+    description: "Comfort-first laser sessions for silky smooth skin.",
+    image: "/images/hair-removal.jpeg",
   },
   {
-    title: "Advanced Technology",
-    copy: "Medical-grade systems selected for efficacy, consistency, and patient comfort.",
+    title: "Laser Photofacial",
+    description: "A light-based glow reset for tired, uneven complexions.",
+    image: "/images/hero1.jpeg",
   },
   {
-    title: "Personalized Care",
-    copy: "Every plan is tailored to concerns, lifestyle, and long-term skin goals.",
+    title: "Hydrafacial",
+    description: "Instant hydration and luminous texture in one premium treatment.",
+    image: "/images/hydrafacial.jpeg",
   },
   {
-    title: "Proven Results",
-    copy: "Structured follow-up, treatment tracking, and premium aftercare support real outcomes.",
+    title: "HIFU Skin Tightening",
+    description: "Firming support with refined contour and natural lift goals.",
+    image: "/images/hifu-treatment.jpeg",
   },
 ];
 
 export const testimonials = [
   {
-    name: "Maya Collins",
-    role: "Hydrafacial Client",
+    name: "Sarah K.",
+    country: "United Kingdom",
+    treatment: "Hydrafacial",
     rating: 5,
     quote:
-      "The entire journey felt elevated from the first consultation. Clinical, calm, and genuinely luxurious.",
+      "My hydrafacial treatment completely transformed my skin texture within weeks. The clinic felt elegant, calm, and exceptionally professional.",
   },
   {
-    name: "Nadine Karim",
-    role: "Laser Hair Removal Client",
+    name: "Ahmed R.",
+    country: "Qatar",
+    treatment: "Laser Hair Removal",
     rating: 5,
     quote:
-      "Beautiful design, clear communication, and visible results. It feels more like a premium members club than a clinic.",
+      "The laser sessions were smooth, well explained, and far more comfortable than I expected. The results were visible after the first few visits.",
   },
   {
-    name: "Sara Williams",
-    role: "Anti-Aging Program Client",
+    name: "Layla M.",
+    country: "Kuwait",
+    treatment: "Skin Tightening (HIFU)",
     rating: 5,
     quote:
-      "I trusted the brand instantly. The team explained every step and the results kept getting better week after week.",
+      "I came for tightening and left with renewed confidence. The entire experience felt premium from the welcome to the aftercare advice.",
   },
-];
-
-export const socialProofItems = [
-  "128 people booked today",
-  "24 consultations in the last hour",
-  "7 anti-aging plans started this morning",
-  "42 glowing reviews added this week",
 ];

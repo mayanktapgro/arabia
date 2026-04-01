@@ -2,12 +2,9 @@ import dynamic from "next/dynamic";
 import { SiteFooter } from "@/components/shared/site-footer";
 import { SiteNavbar } from "@/components/shared/site-navbar";
 import { FloatingActionButton } from "@/components/shared/floating-action-button";
-import { Hero } from "@/components/landing/hero";
-import { TrustBar } from "@/components/landing/trust-bar";
-import { Services } from "@/components/landing/services";
-import { Journey } from "@/components/landing/journey";
-import { WhyChooseUs } from "@/components/landing/why-choose-us";
-import { LiveSocialProof } from "@/components/landing/live-social-proof";
+import { HeroSlider } from "@/components/landing/HeroSlider";
+import { ServicesSection } from "@/components/landing/ServicesSection";
+import { HighDemandSection } from "@/components/landing/HighDemandSection";
 import { FinalCta } from "@/components/landing/final-cta";
 import { SkeletonBlock } from "@/components/ui/skeleton-block";
 
@@ -40,16 +37,15 @@ export default function HomePage() {
   return (
     <>
       <SiteNavbar />
-      <FloatingActionButton href="#book" label="Book Consultation" mode="modal" />
-      <main>
-        <Hero />
-        <TrustBar />
-        <BeforeAfterShowcase />
-        <Services />
-        <Journey />
-        <WhyChooseUs />
+      <FloatingActionButton href="#book" label="Book Appointment" mode="modal" />
+      <main className="bg-[#F5F2EC] text-[#2C2C2C]">
+        <HeroSlider />
+        <ServicesSection />
+        <div className="bg-[#F5F2EC]">
+          <BeforeAfterShowcase />
+        </div>
+        <HighDemandSection />
         <Testimonials />
-        <LiveSocialProof />
         <FinalCta />
       </main>
       <SiteFooter />

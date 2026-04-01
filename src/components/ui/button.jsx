@@ -18,7 +18,7 @@ export function Button({
   ...props
 }) {
   const base =
-    "inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition duration-200";
+    "inline-flex items-center justify-center rounded-full px-5 py-3 cursor-pointer text-white text-sm font-semibold transition duration-200";
   const classes = `${base} ${styles[variant]} ${className}`;
 
   if (as === "button") {

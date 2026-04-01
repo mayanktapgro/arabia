@@ -4,35 +4,37 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 export function FranchiseLeadForm() {
   return (
-    <Reveal id="franchise-form" className="section-shell pt-0">
+    <Reveal id="franchise-form" className="mx-auto w-full max-w-[1440px] px-5 pb-24 sm:px-8 lg:px-14">
       <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
           <SectionHeading
-            eyebrow="Request Details"
-            title="Start the conversation with a high-visibility lead form"
-            description="The form is intentionally prominent and simplified so potential partners can express interest quickly from any device."
+            eyebrow="Apply Now"
+            title="Share your details and our team will take the next step with you"
+            description="The form is simplified exactly as requested. It now keeps only the essentials needed to begin the franchise conversation."
+            tone="dark"
           />
         </div>
 
-        <form className="section-card rounded-[28px] p-6 sm:p-8">
+        <form className="rounded-[28px] border border-[rgba(201,166,70,0.16)] bg-[#FFF7F4] p-6 shadow-[0_18px_55px_rgba(145,103,85,0.1)] sm:p-8">
           <div className="grid gap-4 md:grid-cols-2">
-            <input className="premium-input" placeholder="Name" />
-            <input className="premium-input" placeholder="Phone" />
-            <input className="premium-input" placeholder="City" />
-            <select className="premium-input" defaultValue="">
-              <option value="" disabled>
-                Investment budget
-              </option>
-              <option>$150K - $250K</option>
-              <option>$250K - $400K</option>
-              <option>$400K+</option>
-            </select>
+            <input className="premium-input border-[rgba(201,166,70,0.16)] bg-[#FFFDF8] text-[#2C2C2C]" placeholder="Name" />
+            <input className="premium-input border-[rgba(201,166,70,0.16)] bg-[#FFFDF8] text-[#2C2C2C]" placeholder="Phone Number" />
+            <input
+              name="location"
+              className="premium-input border-[rgba(201,166,70,0.16)] bg-[#FFFDF8] text-[#2C2C2C]"
+              placeholder="City"
+            />
+            <input
+              type="email"
+              className="premium-input border-[rgba(201,166,70,0.16)] bg-[#FFFDF8] text-[#2C2C2C]"
+              placeholder="Email"
+            />
           </div>
-          <textarea
-            className="premium-input mt-4 min-h-32"
-            placeholder="Tell us about your experience, market, or goals"
-          />
-          <Button as="button" type="button" className="mt-6">
+          <Button
+            as="button"
+            type="button"
+            className="mt-6 bg-[#C9A646] hover:bg-[#B8962E]"
+          >
             Request Franchise Details
           </Button>
         </form>
