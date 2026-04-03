@@ -1,6 +1,8 @@
 import { Cairo, Playfair_Display } from "next/font/google";
 import { ContactModalProvider } from "@/components/contact/contact-modal-provider";
 import "./globals.css";
+import { SiteNavbar } from "@/components/shared/site-navbar";
+import { SiteFooter } from "@/components/shared/site-footer";
 
 const cairo = Cairo({
   variable: "--font-cairo",
@@ -23,7 +25,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${cairo.variable} ${playfair.variable}`}>
         <ContactModalProvider>
+          <SiteNavbar />
           <div id="top">{children}</div>
+          <SiteFooter />
         </ContactModalProvider>
       </body>
     </html>

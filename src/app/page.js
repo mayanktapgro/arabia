@@ -5,8 +5,10 @@ import { FloatingActionButton } from "@/components/shared/floating-action-button
 import { HeroSlider } from "@/components/landing/HeroSlider";
 import { ServicesSection } from "@/components/landing/ServicesSection";
 import { HighDemandSection } from "@/components/landing/HighDemandSection";
+import { HomeServicesBanner } from "@/components/landing/home-services-banner";
 import { FinalCta } from "@/components/landing/final-cta";
 import { SkeletonBlock } from "@/components/ui/skeleton-block";
+import AboutSection from "@/components/landing/About";
 
 const BeforeAfterShowcase = dynamic(
   () =>
@@ -36,19 +38,21 @@ const Testimonials = dynamic(
 export default function HomePage() {
   return (
     <>
-      <SiteNavbar />
+
       <FloatingActionButton href="#book" label="Book Appointment" mode="modal" />
       <main className="bg-[#F5F2EC] text-[#2C2C2C]">
         <HeroSlider />
+        <AboutSection />
         <ServicesSection />
         <div className="bg-[#F5F2EC]">
           <BeforeAfterShowcase />
         </div>
         <HighDemandSection />
+        <HomeServicesBanner />
         <Testimonials />
         <FinalCta />
       </main>
-      <SiteFooter />
+
     </>
   );
 }

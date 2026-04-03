@@ -1,96 +1,82 @@
+import { featuredServiceSlugs, servicesData } from "@/data/servicesData";
+
 export const heroSlides = [
   {
     id: "rejuvenation",
-    eyebrow: "Noor Rejuvenation Ritual",
-    title: "Arabic-inspired skin rejuvenation with modern clinical care",
+    eyebrow: "Noor Signature Ritual",
+    title: "Transform your skin with elevated Arabic luxury care",
     description:
-      "Restore glow, softness, and confidence through premium skin rituals designed under warm light, precision protocols, and elegant hospitality.",
+      "Science-led skin rejuvenation, warm hospitality, and luminous treatment journeys designed for guests who expect visible refinement.",
     primaryCta: "Book Appointment",
     secondaryCta: "Explore Treatments",
-    backgroundImage: "/images/hero-banner-1.jpg",
-    image: "/images/hero1.jpeg",
+    backgroundImage: "/arviaData/reception1.jpeg",
+    foregroundImage: "/images/hero1.jpeg",
   },
   {
     id: "laser",
-    eyebrow: "Precision Laser Sessions",
-    title: "Advanced laser treatments for smoother, clearer, more refined skin",
+    eyebrow: "Precision Laser Suites",
+    title: "Advanced laser treatments in a calm, softly lit clinic setting",
     description:
-      "From hair removal to photofacial correction, our treatments pair visible results with a calm, elevated clinic experience.",
+      "From smoother skin to brighter tone correction, our laser programs combine performance, comfort, and premium attention at every step.",
     primaryCta: "Book Appointment",
     secondaryCta: "Explore Treatments",
-    backgroundImage: "/images/hero-banner-2.jpg",
-    image: "/images/hair-removal.jpeg",
+    backgroundImage: "/profile/intro-pics/palmTree1.png",
+    foregroundImage: "/images/hair-removal.jpeg",
   },
   {
     id: "facial",
-    eyebrow: "Advanced Facial Care",
-    title: "Hydration, tightening, and facial therapies designed for luminous results",
+    eyebrow: "Facial Renewal",
+    title: "Hydration, lifting, and glow-focused rituals for visible confidence",
     description:
-      "Luxury facials, brightening care, and age-support treatments tailored for guests seeking visible transformation without losing softness.",
+      "Luxury facials, brightening protocols, and anti-aging care tailored for clients who want instant elegance and long-term skin quality.",
     primaryCta: "Book Appointment",
     secondaryCta: "Explore Treatments",
-    backgroundImage: "/images/hero-banner-3.jpg",
-    image: "/images/hydrafacial.jpeg",
+    backgroundImage: "/arviaData/reception2.jpeg",
+    foregroundImage: "/images/hydrafacial.jpeg",
   },
 ];
 
-export const topServices = [
-  {
-    title: "Laser Hair Removal",
-    description: "Long-lasting smoothness powered by high-precision cooling systems.",
-    image: "/images/hair-removal.jpeg",
-  },
-  {
-    title: "Laser Photofacial",
-    description: "Targets dullness, pigmentation, and uneven tone with controlled light energy.",
-    image: "/images/hero2.jpeg",
-  },
-  {
-    title: "Hydrafacial",
-    description: "Deep cleansing, hydration, and refined texture in one signature session.",
-    image: "/images/hydrafacial.jpeg",
-  },
-  {
-    title: "Skin Tightening (HIFU)",
-    description: "Firming support for lifted contours and smoother, youthful-looking skin.",
-    image: "/images/hifu-treatment.jpeg",
-  },
-  {
-    title: "Chemical Peel / Brightening",
-    description: "Exfoliating treatment plans that reveal clarity, softness, and radiance.",
-    image: "/images/chemical-peels.jpeg",
-  },
-];
+export const topServices = featuredServiceSlugs.map((slug) =>
+  servicesData.find((service) => service.slug === slug)
+);
 
 export const highDemandFeature = {
-  title: "The most requested skin clinic rituals, curated in one place",
+  title: "The clinic's most requested rituals, curated under one refined experience",
   description:
-    "A blend of precision aesthetics and warm Arabian hospitality, designed for clients seeking confidence, comfort, and refined visible results.",
+    "A blend of precision aesthetics and Arabic-inspired hospitality, designed for clients seeking confidence, comfort, and polished visible results.",
   image: "/images/hero2.jpeg",
 };
 
 export const highDemandCards = [
   {
     title: "Laser Hair Removal",
-    description: "Comfort-first laser sessions for silky smooth skin.",
+    description: "Comfort-first sessions for smooth skin and a cleaner routine.",
     image: "/images/hair-removal.jpeg",
   },
   {
     title: "Laser Photofacial",
-    description: "A light-based glow reset for tired, uneven complexions.",
+    description: "Light-based tone correction for glow, clarity, and brightness.",
     image: "/images/hero1.jpeg",
   },
   {
     title: "Hydrafacial",
-    description: "Instant hydration and luminous texture in one premium treatment.",
+    description: "Deep cleansing and hydration with an immediate luminous finish.",
     image: "/images/hydrafacial.jpeg",
   },
   {
     title: "HIFU Skin Tightening",
-    description: "Firming support with refined contour and natural lift goals.",
+    description: "Contour support and firmness in a calm, premium treatment flow.",
     image: "/images/hifu-treatment.jpeg",
   },
 ];
+
+export const homeServiceContent = {
+  title: "Home Services Available at Doorstep in Delhi NCR",
+  description:
+    "Select treatments can be arranged in the privacy of your home with the same premium care standards, planning, and client-first hospitality.",
+  services: ["Laser Hair Removal", "Hydrafacial", "Skin Treatments"],
+  cta: "Book Home Service",
+};
 
 export const testimonials = [
   {
@@ -99,7 +85,7 @@ export const testimonials = [
     treatment: "Hydrafacial",
     rating: 5,
     quote:
-      "My hydrafacial treatment completely transformed my skin texture within weeks. The clinic felt elegant, calm, and exceptionally professional.",
+      "After my hydrafacial, my skin felt brighter within 10 days and my makeup sat beautifully. The clinic felt calm, premium, and thoughtfully managed.",
   },
   {
     name: "Ahmed R.",
@@ -107,14 +93,62 @@ export const testimonials = [
     treatment: "Laser Hair Removal",
     rating: 5,
     quote:
-      "The laser sessions were smooth, well explained, and far more comfortable than I expected. The results were visible after the first few visits.",
+      "The laser sessions were comfortable, well explained, and noticeably effective. The whole environment felt discreet and polished.",
   },
   {
-    name: "Layla M.",
-    country: "Kuwait",
-    treatment: "Skin Tightening (HIFU)",
+    name: "Elena M.",
+    country: "Italy",
+    treatment: "Chemical Peel & Brightening",
     rating: 5,
     quote:
-      "I came for tightening and left with renewed confidence. The entire experience felt premium from the welcome to the aftercare advice.",
+      "My skin looked clearer and more even within a few visits. I appreciated how luxurious the treatment felt without losing medical credibility.",
+  },
+  {
+    name: "Fatima S.",
+    country: "Qatar",
+    treatment: "HIFU Skin Tightening",
+    rating: 5,
+    quote:
+      "I wanted lifting without surgery, and the results felt graceful and natural. The aftercare guidance was just as impressive as the session itself.",
+  },
+  {
+    name: "Lina A.",
+    country: "Kuwait",
+    treatment: "Laser Photofacial",
+    rating: 5,
+    quote:
+      "My complexion looked fresher and more balanced after the photofacial course. It genuinely elevated my confidence for work events.",
+  },
+  {
+    name: "Nadia P.",
+    country: "France",
+    treatment: "Hydrafacial",
+    rating: 5,
+    quote:
+      "The treatment gave me instant hydration and a refined glow that lasted well beyond the week. It felt like luxury with real skin intelligence behind it.",
+  },
+  {
+    name: "Omar H.",
+    country: "Bahrain",
+    treatment: "Laser Hair Removal",
+    rating: 5,
+    quote:
+      "I had expected discomfort, but the sessions were smooth and carefully handled. The visible reduction in regrowth was worth every visit.",
+  },
+  {
+    name: "Maya T.",
+    country: "Germany",
+    treatment: "Collagen Lift Therapy",
+    rating: 5,
+    quote:
+      "My skin looked more rested and refined after a short program. The team made the process feel personal rather than transactional.",
+  },
+  {
+    name: "Yousef N.",
+    country: "Saudi Arabia",
+    treatment: "Hair Restoration Therapy",
+    rating: 5,
+    quote:
+      "The scalp treatment plan was structured, premium, and surprisingly relaxing. I noticed a healthier scalp feel within the first month.",
   },
 ];

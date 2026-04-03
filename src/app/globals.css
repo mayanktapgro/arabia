@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0b0b0c;
-  --bg-soft: #141416;
-  --surface: rgba(255, 255, 255, 0.05);
-  --surface-strong: rgba(255, 255, 255, 0.08);
-  --text: #f5efe3;
-  --muted: #c9c0b0;
-  --line: rgba(255, 255, 255, 0.12);
-  --gold: #c9a14a;
-  --beige: #ede4d3;
-  --shadow: 0 24px 90px rgba(0, 0, 0, 0.28);
+  --bg: #f5f2ec;
+  --bg-soft: #eee8df;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: rgba(255, 255, 255, 0.88);
+  --text: #2c2c2c;
+  --muted: #6a5b4a;
+  --line: rgba(201, 166, 70, 0.18);
+  --gold: #c9a646;
+  --beige: #d8c3a5;
+  --shadow: 0 24px 90px rgba(121, 95, 49, 0.12);
 }
 
 @theme inline {
@@ -32,8 +32,8 @@ body {
   margin: 0;
   background:
     radial-gradient(circle at top left, rgba(201, 161, 74, 0.12), transparent 28%),
-    radial-gradient(circle at top right, rgba(255, 255, 255, 0.05), transparent 18%),
-    linear-gradient(180deg, #0b0b0c, #0b0b0c);
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.58), transparent 18%),
+    linear-gradient(180deg, #f5f2ec, #f5f2ec);
   color: var(--text);
   font-family: var(--font-cairo), sans-serif;
 }
@@ -56,7 +56,7 @@ select {
 
 ::selection {
   background: rgba(201, 161, 74, 0.24);
-  color: white;
+  color: #2c2c2c;
 }
 
 .font-display {
@@ -71,34 +71,34 @@ select {
 
 .section-card {
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.025));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.56));
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
 }
 
 .luxury-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(rgba(201, 166, 70, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 166, 70, 0.06) 1px, transparent 1px);
   background-size: 42px 42px;
 }
 
 .gold-ring {
-  box-shadow: 0 0 0 1px rgba(201, 161, 74, 0.3), 0 18px 40px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 0 0 1px rgba(201, 161, 74, 0.3), 0 18px 40px rgba(121, 95, 49, 0.18);
 }
 
 .premium-input {
   width: 100%;
   border-radius: 18px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--text);
   padding: 0.95rem 1rem;
   outline: none;
 }
 
 .premium-input::placeholder {
-  color: #a89f93;
+  color: #9a8874;
 }
 
 .premium-input:focus {
@@ -109,9 +109,9 @@ select {
 .animated-gradient {
   background:
     radial-gradient(circle at 20% 20%, rgba(201, 161, 74, 0.28), transparent 26%),
-    radial-gradient(circle at 80% 24%, rgba(255, 255, 255, 0.08), transparent 20%),
+    radial-gradient(circle at 80% 24%, rgba(255, 255, 255, 0.48), transparent 20%),
     radial-gradient(circle at 60% 75%, rgba(201, 161, 74, 0.12), transparent 30%),
-    linear-gradient(135deg, #0b0b0c 0%, #131315 55%, #0b0b0c 100%);
+    linear-gradient(135deg, #f5f2ec 0%, #eee8df 55%, #f5f2ec 100%);
   background-size: 140% 140%;
   animation: floatGradient 14s ease-in-out infinite;
 }

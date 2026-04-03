@@ -1,0 +1,19 @@
+<svg width="420" height="620" viewBox="0 0 420 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="leafGlowRight" x1="390" y1="60" x2="102" y2="286" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAC27A" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#C9A646" stop-opacity="0.14"/>
+    </linearGradient>
+    <linearGradient id="trunkRight" x1="192" y1="250" x2="216" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#916C2D"/>
+      <stop offset="1" stop-color="#6E4D22"/>
+    </linearGradient>
+  </defs>
+  <g opacity="0.9">
+    <path d="M196 264C246 190 296 154 368 140C300 126 248 134 188 178C218 116 232 76 220 14C184 86 168 146 170 220C132 144 92 106 18 94C80 140 114 186 148 252C98 216 50 208 -18 220C54 244 108 272 154 324L196 264Z" fill="url(#leafGlowRight)"/>
+    <path d="M176 250C156 340 164 430 190 600" stroke="url(#trunkRight)" stroke-width="24" stroke-linecap="round"/>
+    <path d="M210 382L164 366" stroke="#B8962E" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+    <path d="M216 458L170 442" stroke="#B8962E" stroke-width="8" stroke-linecap="round" opacity="0.42"/>
+    <path d="M224 532L176 518" stroke="#B8962E" stroke-width="8" stroke-linecap="round" opacity="0.32"/>
+  </g>
+</svg>

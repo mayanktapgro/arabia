@@ -4,6 +4,12 @@ export const franchiseHighlights = [
   { value: "ROI 8-12 Months", label: "Designed for fast commercial momentum" },
 ];
 
+export const franchiseExpansion = {
+  title: "Arabia Aesthetic Dermatology & Luxury Care Expansion",
+  description:
+    "Join Arabia Aesthetic Dermatology in redefining premium skincare across regions. Our luxury-driven approach combines advanced dermatological treatments with world-class client experience. As a franchise partner, you gain access to proven systems, expert training, and a rapidly growing aesthetic market.",
+};
+
 export const supportPillars = [
   {
     title: "Theme",
@@ -57,18 +63,79 @@ export const processSteps = [
   "Launch",
 ];
 
-export const operatorStories = [
+export const operatorAdvantageCards = [
   {
-    title: "Operator promise",
-    headline: "Just attend the customer. Rest will be on us.",
+    icon: "G",
+    title: "Business Growth Support",
     copy:
-      "The model is positioned as a full support partnership where branding, technology, launch systems, and growth guidance are already structured for you.",
+      "Structured launch planning, commercial positioning, and ongoing advisory support designed to accelerate revenue maturity.",
   },
   {
-    title: "Opening momentum",
-    headline: "Opening FOMO built into the launch plan",
+    icon: "M",
+    title: "Marketing Assistance",
     copy:
-      "We shape the launch around premium visibility, strong offers, local buzz, and early trust signals so the clinic opens with attention and urgency.",
+      "Campaign support, premium offers, counselling strategy, and AI-assisted customer communication built to convert demand faster.",
+  },
+  {
+    icon: "T",
+    title: "Training Programs",
+    copy:
+      "Staff onboarding, service rituals, consultation frameworks, and hospitality training help your team deliver a polished luxury experience.",
+  },
+  {
+    icon: "R",
+    title: "High ROI Model",
+    copy:
+      "The model is shaped around premium service mix, stronger client retention, and an 8 to 12 month return objective with disciplined execution.",
+  },
+];
+
+export const franchiseStats = [
+  {
+    kicker: "ROI",
+    value: 12,
+    suffix: "m",
+    label: "ROI window",
+    copy: "Targeted 8 to 12 month commercial return with strong launch execution and support.",
+  },
+  {
+    kicker: "Clinic",
+    value: 2500,
+    suffix: "sqft",
+    label: "Upper space range",
+    copy: "Designed to accommodate premium reception, consultation, and treatment zones.",
+  },
+  {
+    kicker: "Support",
+    value: 5,
+    suffix: "x",
+    label: "Core support pillars",
+    copy: "Theme, technology, marketing, location support, and customer operations work together.",
+  },
+  {
+    kicker: "Launch",
+    value: 24,
+    suffix: "/7",
+    label: "AI-led support stack",
+    copy: "Counselling, offers, and customer response systems strengthen pre-opening and post-opening conversion.",
+  },
+];
+
+export const globalPresenceCards = [
+  {
+    icon: "D",
+    title: "Dubai",
+    copy: "Flagship-ready positioning for a global city where premium skincare and aesthetic demand already understands luxury presentation.",
+  },
+  {
+    icon: "R",
+    title: "Riyadh",
+    copy: "A strong regional growth market for high-end beauty and dermatology experiences delivered with cultural confidence.",
+  },
+  {
+    icon: "IN",
+    title: "Master Franchise for India",
+    copy: "Built for ambitious operators who want to scale a premium concept across cities with stronger territory-level ownership.",
   },
 ];
 

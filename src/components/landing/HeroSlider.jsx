@@ -13,7 +13,7 @@ export function HeroSlider() {
   useEffect(() => {
     const interval = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % heroSlides.length);
-    }, 4500);
+    }, 4000);
 
     return () => window.clearInterval(interval);
   }, []);
@@ -23,16 +23,16 @@ export function HeroSlider() {
   return (
     <section
       id="home-hero"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#F8F5EF_0%,#F5F2EC_48%,#EFE7DB_100%)]"
+      className="relative min-h-[100svh] overflow-hidden bg-[#F5F2EC]"
     >
       <AnimatePresence mode="wait">
         <motion.div
           key={`${activeSlide.id}-background`}
           className="absolute inset-0"
-          initial={{ opacity: 0, scale: 1.04 }}
+          initial={{ opacity: 0, scale: 1.03 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 1.02 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          exit={{ opacity: 0, scale: 1.01 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           <Image
             src={activeSlide.backgroundImage}
@@ -41,69 +41,54 @@ export function HeroSlider() {
             priority
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(245,242,236,0.74)_5%,rgba(245,242,236,0.56)_34%,rgba(245,242,236,0.18)_60%,rgba(245,242,236,0.28)_100%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(234,194,122,0.12),transparent_40%)]" />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(245,242,236,0.06),rgba(239,231,219,0.32))]" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(245,242,236,0.9),rgba(245,242,236,0.4))]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_right_top,rgba(234,194,122,0.22),transparent_38%)]" />
         </motion.div>
       </AnimatePresence>
 
       <motion.div
-        className="pointer-events-none absolute left-0 top-0 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(234,194,122,0.45),transparent_68%)]"
-        animate={{ scale: [1, 1.06, 1], opacity: [0.55, 0.75, 0.55] }}
-        transition={{ duration: 6, repeat: Infinity }}
-      />
+        className="pointer-events-none absolute left-0 top-24 z-10 hidden xl:block"
+        animate={{ y: [0, -10, 0], rotate: [0, -1.5, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      >
+        {/* <Image
+          src="/profile/palm-trees/palm-left.svg"
+          alt="Palm decoration"
+          width={250}
+          height={380}
+          className="h-auto w-[190px] opacity-75"
+          priority
+        /> */}
+      </motion.div>
       <motion.div
-        className="pointer-events-none absolute right-0 top-10 h-80 w-80 rounded-full bg-[radial-gradient(circle,rgba(201,166,70,0.2),transparent_70%)]"
-        animate={{ scale: [1.05, 1, 1.05], opacity: [0.4, 0.6, 0.4] }}
-        transition={{ duration: 7, repeat: Infinity }}
-      />
-
-      {/* <motion.div
-        className="pointer-events-none absolute left-4 top-0 z-10 md:left-12"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut" }}
-        style={{ filter: "drop-shadow(0 0 20px #EAC27A)" }}
+        className="pointer-events-none absolute bottom-0 right-0 z-10 hidden xl:block"
+        animate={{ y: [0, 12, 0], rotate: [0, 1.5, 0] }}
+        transition={{ duration: 6.6, repeat: Infinity, ease: "easeInOut" }}
       >
-        <Image
-          src="/images/light1.jpg"
-          alt="Decorative lantern"
-          width={150}
-          height={260}
-          className="h-28 w-auto object-contain md:h-44 rounded-2xl"
+        {/* <Image
+          src="/profile/palm-trees/palm-right.svg"
+          alt="Palm decoration"
+          width={250}
+          height={360}
+          className="h-auto w-[190px] opacity-75"
           priority
-        />
-      </motion.div> */}
+        /> */}
+      </motion.div>
 
-      {/* <motion.div
-        className="pointer-events-none absolute right-4 top-0 z-10 md:right-12"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 3.9, repeat: Infinity, ease: "easeInOut" }}
-        style={{ filter: "drop-shadow(0 0 20px #EAC27A)" }}
-      >
-        <Image
-          src="/images/light2.jpg"
-          alt="Decorative lantern"
-          width={150}
-          height={260}
-          className="h-28 w-auto object-contain md:h-44 rounded-2xl"
-          priority
-        />
-      </motion.div> */}
-
-      <div className="mx-auto grid min-h-[92vh] w-full max-w-[1440px] items-center gap-12 px-5 pb-16 pt-28 sm:px-8 lg:grid-cols-[0.96fr_1.04fr] lg:px-14">
+      <div className="mx-auto grid min-h-[100svh] w-full max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-14">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSlide.id}
-            initial={{ opacity: 0, x: -36 }}
+            initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 18 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-20"
+            exit={{ opacity: 0, x: 16 }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            className="relative z-20 max-w-2xl"
           >
             <p className="inline-flex rounded-full border border-[rgba(201,166,70,0.25)] bg-white/70 px-4 py-2 text-xs uppercase tracking-[0.3em] text-[#A8821E] shadow-[0_10px_30px_rgba(201,166,70,0.12)]">
               {activeSlide.eyebrow}
             </p>
-            <h1 className="font-display mt-6 max-w-2xl text-5xl leading-[1.02] text-[#2C2C2C] sm:text-6xl lg:text-7xl">
+            <h1 className="font-display mt-6 text-3xl leading-[1.02] text-[#2C2C2C] sm:text-6xl lg:text-5xl line-clamp-2">
               {activeSlide.title}
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-[#6A5B4A]">
@@ -117,7 +102,7 @@ export function HeroSlider() {
               <Button
                 href="#services"
                 variant="secondary"
-                className="border-[#C9A646]/40 bg-[#F8F2E7] text-[#2C2C2C] hover:bg-[#F1E9DD]"
+                className="border-[#C9A646]/40 bg-[#F8F2E7] text-[#2C2C2C] hover:bg-[#B8962E]"
               >
                 {activeSlide.secondaryCta}
               </Button>
@@ -129,9 +114,7 @@ export function HeroSlider() {
                   key={slide.id}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${index === activeIndex
-                    ? "w-12 bg-[#C9A646]"
-                    : "w-6 bg-[#D8C3A5]"
+                  className={`h-2.5 rounded-full transition-all duration-300 ${index === activeIndex ? "w-12 bg-[#C9A646]" : "w-6 bg-[#D8C3A5]"
                     }`}
                   aria-label={`Go to ${slide.title}`}
                 />
@@ -142,27 +125,31 @@ export function HeroSlider() {
 
         <AnimatePresence mode="wait">
           <motion.div
-            key={`${activeSlide.id}-image`}
-            initial={{ opacity: 0, x: 32 }}
+            key={`${activeSlide.id}-foreground`}
+            initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -12 }}
+            exit={{ opacity: 0, x: -16 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-10"
+            className="relative z-20"
           >
-            <div className="relative overflow-hidden rounded-[32px] border border-[rgba(201,166,70,0.18)] bg-[rgba(255,248,235,0.44)] p-3 shadow-[0_30px_90px_rgba(110,87,42,0.12)] backdrop-blur-sm">
-              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(234,194,122,0.08),transparent_32%,rgba(201,166,70,0.04))]" />
-              <div className="relative overflow-hidden rounded-[26px]">
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+              className="relative ml-auto overflow-hidden rounded-[34px] border border-[rgba(201,166,70,0.2)] bg-[rgba(255,249,239,0.48)] p-3 shadow-[0_26px_80px_rgba(104,83,51,0.16)] backdrop-blur-sm"
+            >
+              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(234,194,122,0.14),transparent_40%,rgba(201,166,70,0.04))]" />
+              <div className="relative overflow-hidden rounded-[28px]">
                 <Image
-                  src={activeSlide.image}
+                  src={activeSlide.foregroundImage}
                   alt={activeSlide.title}
                   width={920}
                   height={980}
                   priority
-                  className="h-[420px] w-full object-cover sm:h-[520px] lg:h-[640px]"
+                  className="h-[420px] w-full object-cover sm:h-[520px] lg:h-[660px]"
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),transparent_35%,rgba(80,58,25,0.16))]" />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.1),transparent_32%,rgba(80,58,25,0.18))]" />
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         </AnimatePresence>
       </div>

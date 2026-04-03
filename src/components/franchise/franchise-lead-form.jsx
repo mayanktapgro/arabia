@@ -24,11 +24,11 @@ export function FranchiseLeadForm() {
               className="premium-input border-[rgba(201,166,70,0.16)] bg-[#FFFDF8] text-[#2C2C2C]"
               placeholder="City"
             />
-            <input
+            {/* <input
               type="email"
               className="premium-input border-[rgba(201,166,70,0.16)] bg-[#FFFDF8] text-[#2C2C2C]"
               placeholder="Email"
-            />
+            /> */}
           </div>
           <Button
             as="button"
