@@ -72,6 +72,45 @@ export const servicesData = [
     ],
   },
   {
+    title: "Laser Hair Removal",
+    slug: "laser-hair-removal",
+    image: "/images/hair-removal.jpeg",
+    heroImage: "/images/hair-removal.jpeg",
+    cardImage: "/images/hair-removal.jpeg",
+    category: "Laser Treatments",
+    shortDescription: "Comfort-led laser sessions designed to reduce regrowth and simplify your grooming routine.",
+    description:
+      "A premium laser hair reduction program designed to target unwanted hair with greater comfort, cleaner routines, and long-term convenience. Sessions are planned around skin tone, treatment area, and hair density so the experience feels safe, structured, and effective.",
+    menuDescription: "Comfort-first laser reduction for smoother skin and reduced regrowth.",
+    benefits: [
+      "Helps reduce visible hair regrowth over time",
+      "Supports smoother skin with fewer ingrown concerns",
+      "Suitable for face and body treatment plans",
+      "Structured in a consultation-led treatment course",
+    ],
+    steps: [
+      "Consultation and skin-hair suitability review",
+      "Treatment area prep and laser parameter mapping",
+      "Comfort-led laser session with cooling support",
+      "Aftercare guidance and course scheduling",
+    ],
+    homeServiceAvailable: true,
+    keyHighlights: [
+      "Home service available in select Delhi NCR locations",
+      "Popular for full body, underarm, bikini, and facial zones",
+      "Designed for comfort with clear session planning",
+    ],
+    results:
+      "Laser Hair Removal is designed to support smoother skin, reduced regrowth, and a lower frequency of shaving or waxing over a planned series of sessions.",
+    extraInfo: {
+      popularDrips: [
+        "Full Face",
+        "Individual Body Part",
+        "Full body",
+      ]
+    },
+  },
+  {
     title: "HIFU Body Tightening",
     slug: "hifu-body-tightening",
     image: "/services/hifu.jpg",
@@ -94,9 +133,16 @@ export const servicesData = [
       "Targeted tightening session",
       "Aftercare advice and follow-up plan",
     ],
+    extraInfo: {
+      popularDrips: [
+        "Face Tightening",
+        "Breast Tightening",
+        "Full body",
+      ]
+    },  
   },
   {
-    title: "Skin Resurfacing and Brightning",
+    title: "Skin Resurfacing and Brightening",
     slug: "co2-fractional-laser",
     image: "/services/co2.jpg",
     heroImage: "/services/co2.jpg",
@@ -238,6 +284,14 @@ export const servicesData = [
       "Hydration infusion and glow protocol",
       "Finishing protection and aftercare guidance",
     ],
+    homeServiceAvailable: true,
+    keyHighlights: [
+      "Home service available for selected Delhi NCR appointments",
+      "Ideal before events, travel, and monthly skin maintenance",
+      "Focuses on cleansing, hydration, and immediate glow support",
+    ],
+    results:
+      "Hydra Facial is designed to restore hydration, improve softness, and leave the complexion looking clearer, fresher, and more radiant almost immediately.",
   },
   {
     title: "Milia Treatment",
@@ -434,9 +488,9 @@ export const servicesData = [
   {
     title: "Lip Care",
     slug: "lip-care",
-    image: "/images/services/service19.jpg",
-    heroImage: "/images/services/service19.jpg",
-    cardImage: "/images/services/service19.jpg",
+    image: "/services/lip-care.jpg",
+    heroImage: "/services/lip-care.jpg",
+    cardImage: "/services/lip-care.jpg",
     category: "Aesthetic Enhancement",
     shortDescription: "Hydration and rejuvenation treatments for soft, healthy lips.",
     description:
@@ -454,6 +508,58 @@ export const servicesData = [
       "Hydration infusion",
       "Finishing care",
     ],
+  },
+  {
+    title: "IV Drip Therapy",
+    slug: "iv-drip-therapy",
+    image: "/services/iv-drips.jpeg",
+    heroImage: "/services/iv-drips.jpeg",
+    cardImage: "/services/iv-drips.jpeg",
+    category: "Wellness & Rejuvenation",
+    shortDescription: "Advanced intravenous therapy delivering essential vitamins, hydration, and antioxidants directly into the bloodstream for faster and more effective results.",
+    description:
+      "IV Drip Therapy is a medically supervised wellness treatment that delivers a customized blend of vitamins, minerals, antioxidants, and hydration directly into your bloodstream. Unlike oral supplements, IV therapy ensures higher absorption and faster results, helping improve skin glow, boost immunity, enhance energy levels, and support overall wellness. This treatment is ideal for individuals looking for instant revitalization, recovery, and aesthetic enhancement from within.",
+    menuDescription: "Vitamin-rich IV infusion for glow, energy, and hydration.",
+    benefits: [
+      "Instant hydration and skin radiance boost",
+      "Improves energy levels and reduces fatigue",
+      "Supports immune system function",
+      "Enhances skin glow and overall complexion",
+      "Helps detoxify the body",
+      "Promotes faster recovery from stress and fatigue",
+      "High absorption compared to oral supplements",
+    ],
+    steps: [
+      "Initial consultation and health assessment",
+      "Selection of customized IV drip formula",
+      "Preparation and sterilization of treatment area",
+      "Intravenous infusion administered by trained professional",
+      "Monitoring during the session (30-60 minutes)",
+      "Post-treatment relaxation and hydration advice",
+    ],
+    homeServiceAvailable: true,
+    keyHighlights: [
+      "Home service available for selected IV wellness sessions",
+      "Popular for glow, hydration, detox, and recovery goals",
+      "Delivered under trained professional supervision",
+    ],
+    results: "IV Drip Therapy is designed to improve hydration, support energy levels, and promote a fresher, more rested appearance through fast nutrient delivery.",
+    extraInfo: {
+      popularDrips: [
+        "Glow Drip (Skin Brightening & Hydration)",
+        "Energy Boost Drip (Vitamin B Complex)",
+        "Detox Drip (Antioxidants & Vitamin C)",
+        "Immunity Boost Drip",
+        "Anti-Aging Drip",
+      ]
+    },
+    signatureDrips: [
+      { title: "Detoxification", description: "Body cleanse with potent antioxidants." },
+      { title: "Glow & Hydration", description: "Vitamins and hydration for luminous skin." },
+      { title: "Rejuvenation", description: "Anti-aging support and faster cell recovery." },
+      { title: "Recovery", description: "Relieves stress, fatigue, and jet lag." },
+      { title: "Weight Management", description: "Supports metabolism and fat reduction goals." },
+    ],
   }
 ];
 
@@ -461,7 +567,7 @@ export const serviceCategories = [
   {
     title: "Laser Treatments",
     description: "Precision-led correction and resurfacing technologies.",
-    slugs: ["laser-photofacial", "co2-fractional-laser", "tattoo-removal"],
+    slugs: ["laser-photofacial", "laser-hair-removal", "co2-fractional-laser", "tattoo-removal"],
   },
   {
     title: "Skin Rejuvenation",

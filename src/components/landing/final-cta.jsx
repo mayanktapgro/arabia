@@ -3,19 +3,19 @@ import { Reveal } from "@/components/ui/reveal";
 
 export function FinalCta() {
   return (
-    <Reveal id="contact" className="mx-auto w-full max-w-[1440px] px-5 py-24 sm:px-8 lg:px-14">
-      <div className="overflow-hidden rounded-[32px] border border-[rgba(201,166,70,0.2)] bg-[linear-gradient(135deg,#2C2C2C,#473824,#2C2C2C)] px-6 py-14 shadow-[0_28px_80px_rgba(68,53,24,0.25)] sm:px-10">
-        <p className="text-sm uppercase tracking-[0.3em] text-[#EAC27A]">
+    <Reveal id="contact" className="mx-auto w-full max-w-[1440px] px-5 py-10 sm:px-8 lg:px-14">
+      <div className="overflow-hidden rounded-[28px] border border-[rgba(212,175,55,0.22)] bg-[linear-gradient(135deg,#132855,#1B376F,#132855)] px-6 py-12 shadow-[0_28px_80px_rgba(19,40,85,0.22)] sm:px-10">
+        <p className="text-sm uppercase tracking-[0.3em] text-[#E7C968]">
           Premium Consultation
         </p>
-        <h2 className="font-display mt-4 max-w-3xl text-4xl leading-tight text-[#FFF8EE] sm:text-5xl">
+        <h2 className="font-display mt-4 max-w-3xl text-4xl leading-tight text-white sm:text-5xl">
           Begin your radiance journey in a space designed for calm and confidence
         </h2>
-        <p className="mt-4 max-w-2xl text-base leading-8 text-[#F1E5D0]">
+        <p className="mt-4 max-w-2xl text-base leading-8 text-white/78">
           Book a private appointment and let our specialists design the right
           facial, laser, or rejuvenation plan for your skin goals.
         </p>
-        <OpenContactButton className="mt-8 bg-[#C9A646] hover:bg-[#B8962E]">
+        <OpenContactButton className="premium-button mt-8 hover:bg-[#B8962E]">
           Book Appointment
         </OpenContactButton>
       </div>

@@ -1,6 +1,4 @@
 import { FloatingActionButton } from "@/components/shared/floating-action-button";
-import { SiteFooter } from "@/components/shared/site-footer";
-import { SiteNavbar } from "@/components/shared/site-navbar";
 import { FranchiseHero } from "@/components/franchise/franchise-hero";
 import { WhyInvest } from "@/components/franchise/why-invest";
 import { FranchiseBenefits } from "@/components/franchise/franchise-benefits";
@@ -15,9 +13,8 @@ import { FranchiseFaq } from "@/components/franchise/franchise-faq";
 export default function FranchisePage() {
   return (
     <>
-
       <FloatingActionButton href="#franchise-form" label="Apply Now" />
-      <main className="bg-[linear-gradient(180deg,#FFF7F5_0%,#FCEBE5_38%,#F8E2DB_100%)] text-[#2C2C2C]">
+      <main className="bg-[linear-gradient(180deg,#1F3A5F_0%,#25456F_45%,#1B3556_100%)] text-white">
         <FranchiseHero />
         <WhyInvest />
         <FranchiseBenefits />
@@ -29,7 +26,6 @@ export default function FranchisePage() {
         <FranchiseLeadForm />
         <FranchiseFaq />
       </main>
-
     </>
   );
 }

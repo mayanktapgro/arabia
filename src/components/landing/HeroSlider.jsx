@@ -102,7 +102,7 @@ export function HeroSlider() {
               <Button
                 href="#services"
                 variant="secondary"
-                className="border-[#C9A646]/40 bg-[#F8F2E7] text-[#2C2C2C] hover:bg-[#B8962E]"
+                className="border-[#C9A646]/40 bg-[#F8F2E7] text-[#ffffff] hover:bg-[#B8962E]"
               >
                 {activeSlide.secondaryCta}
               </Button>

@@ -1,163 +1,493 @@
+// import Image from "next/image";
+// import { notFound } from "next/navigation";
+// import { OpenContactButton } from "@/components/contact/open-contact-button";
+// import { Reveal } from "@/components/ui/reveal";
+// import { SectionHeading } from "@/components/ui/section-heading";
+// import { getServiceBySlug, servicesData } from "@/data/servicesData";
+
+// export function generateStaticParams() {
+//   return servicesData.map((service) => ({
+//     slug: service.slug,
+//   }));
+// }
+
+// export default async function ServiceDetailPage({ params }) {
+//   const { slug } = await params;
+//   const service = await getServiceBySlug(slug);
+
+//   if (!service) {
+//     notFound();
+//   }
+
+//   return (
+//     <main className="lux-bg text-[var(--text)]">
+//         <section className="relative overflow-hidden">
+//           <div className="absolute inset-0">
+//             <Image
+//               src={service.heroImage}
+//               alt={service.title}
+//               fill
+//               priority
+//               className="object-cover"
+//             />
+//             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(247,243,238,0.94),rgba(247,243,238,0.74),rgba(247,243,238,0.2))]" />
+//           </div>
+
+//           <div className="relative mx-auto grid min-h-[62vh] w-full max-w-[1440px] items-center gap-8 px-5 pb-14 pt-24 sm:px-8 lg:grid-cols-[0.96fr_1.04fr] lg:px-14">
+//             <div className="max-w-2xl">
+//               <p className="text-sm uppercase tracking-[0.28em] text-[#EAC27A]">
+//                 {service.category}
+//               </p>
+//               <h1 className="font-display mt-5 text-5xl leading-[1.04] text-[#2C2C2C] sm:text-6xl">
+//                 {service.title}
+//               </h1>
+//               <p className="mt-6 max-w-xl text-lg leading-8 text-[#6A5B4A]">
+//                 {service.description}
+//               </p>
+//               <OpenContactButton className="mt-8 bg-[#C9A646] hover:bg-[#B8962E]">
+//                 Book Consultation
+//               </OpenContactButton>
+//             </div>
+
+//             <div className="premium-card overflow-hidden rounded-[24px] p-3">
+//               <div className="relative overflow-hidden rounded-[20px]">
+//                 <Image
+//                   src={service.image}
+//                   alt={service.title}
+//                   width={920}
+//                   height={980}
+//                   loading="lazy"
+//                   className="h-[320px] w-full object-cover sm:h-[400px] lg:h-[440px]"
+//                 />
+//               </div>
+//             </div>
+//           </div>
+//         </section>
+
+//         {service.homeServiceAvailable ? (
+//           <Reveal className="mx-auto w-full max-w-[1440px] px-5 pt-14 sm:px-8 lg:px-14">
+//             <div className="overflow-hidden rounded-[24px] bg-[linear-gradient(135deg,#1F3A5F,#284B76)] p-[1px] shadow-[0_20px_60px_rgba(31,58,95,0.16)]">
+//               <div className="grid gap-5 rounded-[23px] bg-[linear-gradient(135deg,rgba(31,58,95,0.96),rgba(31,58,95,0.88))] px-6 py-7 sm:px-8 lg:grid-cols-[1fr_auto] lg:items-center">
+//                 <div>
+//                   <p className="text-sm uppercase tracking-[0.28em] text-[#EAC27A]">
+//                     Home Service Availability
+//                   </p>
+//                   <h2 className="font-display mt-3 text-3xl text-white sm:text-4xl">
+//                     Home service available in Delhi NCR
+//                   </h2>
+//                   <p className="mt-3 max-w-2xl text-sm leading-7 text-white/80">
+//                     This treatment can be planned for select doorstep appointments with the same consultation-led care, comfort, and premium coordination.
+//                   </p>
+//                 </div>
+//                 <OpenContactButton className="premium-button whitespace-nowrap hover:bg-[#B8962E]">
+//                   Book Home Service
+//                 </OpenContactButton>
+//               </div>
+//             </div>
+//           </Reveal>
+//         ) : null}
+
+//         {service.keyHighlights?.length ? (
+//           <Reveal className="mx-auto w-full max-w-[1440px] px-5 pt-10 sm:px-8 lg:px-14">
+//             <div className="premium-card rounded-[24px] p-6 sm:p-8">
+//               <p className="text-sm uppercase tracking-[0.28em] text-[var(--gold)]">
+//                 Key Highlights
+//               </p>
+//               <div className="mt-5 grid gap-4 sm:grid-cols-3">
+//                 {service.keyHighlights.map((highlight) => (
+//                   <div
+//                     key={highlight}
+//                     className="rounded-[18px] border border-[rgba(201,166,70,0.16)] bg-[rgba(201,166,70,0.06)] px-4 py-4 text-sm leading-7 text-[var(--muted)]"
+//                   >
+//                     {highlight}
+//                   </div>
+//                 ))}
+//               </div>
+//             </div>
+//           </Reveal>
+//         ) : null}
+
+//         <Reveal className="mx-auto w-full max-w-[1440px] px-5 py-20 sm:px-8 lg:px-14">
+//           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+//             <div>
+//               <SectionHeading
+//                 eyebrow="Benefits"
+//                 title="Why guests choose this treatment"
+//                 description="Each service page follows the same refined structure so visitors can quickly understand value, comfort, and expected outcomes."
+//                 tone="dark"
+//               />
+//             </div>
+//             <div className="grid gap-5 sm:grid-cols-2">
+//               {service.benefits.map((benefit) => (
+//                 <article
+//                   key={benefit}
+//                   className="premium-card rounded-[18px] p-5"
+//                 >
+//                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(201,166,70,0.14)] text-sm font-semibold text-[#EAC27A]">
+//                     +
+//                   </div>
+//                   <p className="mt-4 text-base leading-8 text-[var(--muted)]">{benefit}</p>
+//                 </article>
+//               ))}
+//             </div>
+//           </div>
+//         </Reveal>
+
+//         <Reveal className="mx-auto w-full max-w-[1440px] px-5 pb-20 sm:px-8 lg:px-14">
+//           <SectionHeading
+//             eyebrow="Procedure"
+//             title="A clear premium treatment journey"
+//             description="We break the procedure into a calm, digestible flow that feels high-end, reassuring, and easy to understand."
+//             tone="dark"
+//           />
+
+//           <div className="relative mt-12">
+//             <div className="absolute left-[10%] right-[10%] top-8 z-0 hidden h-[2px] bg-gradient-to-r from-[rgba(201,166,70,0.42)] via-[rgba(201,166,70,0.58)] to-[rgba(201,166,70,0.42)] lg:block" />
+//             <div className="grid gap-6 lg:grid-cols-4">
+//               {service.steps.map((step, index) => (
+//                 <article
+//                   key={step}
+//                   className="premium-card relative z-10 rounded-[20px] p-6"
+//                 >
+//                   <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[rgba(201,166,70,0.24)] bg-[rgba(201,166,70,0.12)] text-xl font-semibold text-[#EAC27A]">
+//                     {index + 1}
+//                   </div>
+//                   <h3 className="font-display mt-5 text-2xl text-[var(--text)]">{step}</h3>
+//                 </article>
+//               ))}
+//             </div>
+//           </div>
+//         </Reveal>
+
+//         <Reveal className="mx-auto w-full max-w-[1440px] px-5 pb-20 sm:px-8 lg:px-14">
+//           <div className="grid gap-6 lg:grid-cols-[1fr_0.78fr]">
+//             <div className="premium-card overflow-hidden rounded-[24px] p-3">
+//               <div className="relative overflow-hidden rounded-[20px]">
+//                 <Image
+//                   src="/images/before-after1.jpeg"
+//                   alt={`${service.title} transformation example`}
+//                   width={1200}
+//                   height={900}
+//                   className="h-[300px] w-full object-cover sm:h-[360px] lg:h-[400px]"
+//                 />
+//                 <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_28%,rgba(44,44,44,0.52)_100%)]" />
+//                 <div className="absolute bottom-0 left-0 p-5 text-white sm:p-7">
+//                   <p className="text-sm uppercase tracking-[0.24em] text-[#EAC27A]">
+//                     Before / After
+//                   </p>
+//                   <p className="mt-3 max-w-md text-base leading-7 text-white/86">
+//                     Representative treatment results help clients understand the
+//                     kind of texture, tone, and confidence improvements this
+//                     service is designed to support.
+//                   </p>
+//                 </div>
+//               </div>
+//             </div>
+
+//             <div className="premium-card rounded-[24px] p-6 sm:p-7">
+//               <SectionHeading
+//                 eyebrow="Expected Outcome"
+//                 title="What this treatment is designed to improve"
+//                 description={
+//                   service.results ||
+//                   "This treatment is designed to improve visible skin quality, comfort, and confidence through a structured plan tailored to your goals."
+//                 }
+//                 tone="dark"
+//               />
+//               <div className="mt-6 space-y-3">
+//                 {service.benefits.slice(0, 3).map((item) => (
+//                   <div
+//                     key={item}
+//                     className="rounded-[16px] border border-[rgba(201,166,70,0.16)] bg-[rgba(201,166,70,0.06)] px-4 py-3 text-sm leading-7 text-[var(--muted)]"
+//                   >
+//                     {item}
+//                   </div>
+//                 ))}
+//               </div>
+//               <OpenContactButton className="mt-8 bg-[#C9A646] hover:bg-[#B8962E]">
+//                 Book Consultation
+//               </OpenContactButton>
+//             </div>
+//           </div>
+//         </Reveal>
+//       </main>
+//   );
+// }
+
+// app/services/[slug]/page.tsx
+
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { OpenContactButton } from "@/components/contact/open-contact-button";
-import { SiteFooter } from "@/components/shared/site-footer";
-import { SiteNavbar } from "@/components/shared/site-navbar";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { getServiceBySlug, servicesData } from "@/data/servicesData";
 
-export function generateStaticParams() {
-  return servicesData.map((service) => ({
-    slug: service.slug,
-  }));
-}
+// ...generateStaticParams remains the same
 
 export default async function ServiceDetailPage({ params }) {
   const { slug } = await params;
   const service = await getServiceBySlug(slug);
 
   if (!service) {
-    notFound();
+    notfound();
   }
 
   return (
-    <>
-      <main className="bg-[#F5F2EC] text-[#2C2C2C]">
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0">
-            <Image
-              src={service.heroImage}
-              alt={service.title}
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(245,242,236,0.92),rgba(245,242,236,0.48))]" />
-          </div>
+    // Changed lux-bg to a cleaner white-ish bg
+    <main className="bg-white text-[var(--text)]">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src={service.heroImage}
+            alt={service.title}
+            fill
+            priority
+            className="object-cover"
+          />
+          {/* CHANGED: Swapped beige overlays for a very light English Blue/white gradient */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.96),rgba(240,245,250,0.85),rgba(255,255,255,0.2))]" />
+        </div>
 
-          <div className="relative mx-auto grid min-h-[70vh] w-full max-w-[1440px] items-center gap-10 px-5 pb-16 pt-28 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-14">
-            <div className="max-w-2xl">
-              <p className="text-sm uppercase tracking-[0.28em] text-[#A8821E]">
-                {service.category}
-              </p>
-              <h1 className="font-display mt-5 text-5xl leading-[1.04] sm:text-6xl">
-                {service.title}
-              </h1>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-[#6A5B4A]">
-                {service.description}
-              </p>
-              <OpenContactButton className="mt-8 bg-[#C9A646] hover:bg-[#B8962E]">
+        <div className="relative mx-auto grid min-h-[62vh] w-full max-w-[1440px] items-center gap-12 px-5 pb-14 pt-24 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-14">
+          <div className="max-w-2xl">
+            {/* Category: Uses the brighter Gold */}
+            <p className="text-sm uppercase tracking-[0.28em] text-[var(--gold)]">
+              {service.category}
+            </p>
+            {/* Title: Dark Grey/Black */}
+            <h1 className="font-display mt-5 text-5xl leading-[1.04] text-[#111111] sm:text-6xl">
+              {service.title}
+            </h1>
+            {/* Description: Muted Blue-Grey */}
+            <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)]">
+              {service.description}
+            </p>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              {/* Primary Button: Bright Gold */}
+              <OpenContactButton className="bg-[var(--gold)] hover:bg-[#132855] text-white">
                 Book Consultation
               </OpenContactButton>
-            </div>
 
-            <div className="overflow-hidden rounded-[30px] border border-[rgba(201,166,70,0.18)] bg-[rgba(255,248,235,0.55)] p-3 shadow-[0_26px_80px_rgba(104,83,51,0.14)] backdrop-blur-sm">
-              <div className="relative overflow-hidden rounded-[24px]">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  width={920}
-                  height={980}
-                  loading="lazy"
-                  className="h-[380px] w-full object-cover sm:h-[520px]"
-                />
-              </div>
+              {/* CHANGED: Secondary Button is now English Blue */}
+              {/* <OpenContactButton className="bg-[var(--english-blue)] hover:bg-[#152F47] text-white">
+                Learn More
+              </OpenContactButton> */}
             </div>
           </div>
-        </section>
 
-        <Reveal className="mx-auto w-full max-w-[1440px] px-5 py-24 sm:px-8 lg:px-14">
-          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          {/* CHANGED: Main Image Card: Swapped dark bg for White with English Blue border */}
+          <div className="overflow-hidden rounded-[24px] border border-[var(--english-blue)]/20 bg-white p-3 shadow-2xl shadow-[var(--english-blue)]/5">
+            <div className="relative overflow-hidden rounded-[20px]">
+              <Image
+                src={service.image}
+                alt={service.title}
+                width={920}
+                height={980}
+                priority
+                className="h-[320px] w-full object-cover sm:h-[400px] lg:h-[480px]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- ADDED: Popular Points List (Left Side Below Hero) --- */}
+      {service.extraInfo?.popularDrips?.length ? (
+        <Reveal className="mx-auto w-full max-w-[1440px] px-5 pt-10 sm:px-8 lg:px-14">
+          <div className="grid gap-10 lg:grid-cols-[0.4fr_0.6fr] lg:items-center">
             <div>
               <SectionHeading
-                eyebrow="Benefits"
-                title="Why guests choose this treatment"
-                description="Each service page follows the same refined structure so visitors can quickly understand value, comfort, and expected outcomes."
+                eyebrow="Popular Options"
+                title="Featured Wellness Formulations"
                 tone="dark"
               />
             </div>
-            <div className="grid gap-5 sm:grid-cols-2">
-              {service.benefits.map((benefit) => (
-                <article
-                  key={benefit}
-                  className="rounded-[22px] border border-[rgba(201,166,70,0.16)] bg-[#EEE8DF] p-5 shadow-[0_16px_45px_rgba(121,95,49,0.08)]"
+
+            {/* Bright, colorful cards for the points */}
+            <div className="grid gap-3 sm:grid-cols-2">
+              {service.extraInfo.popularDrips.map((drip) => (
+                <div
+                  key={drip}
+                  className="rounded-[16px] border border-[var(--gold)]/25 bg-[var(--gold)] px-5 py-4 text-sm leading-7 text-[#fff]"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF8EB] text-sm font-semibold text-[#A8821E]">
-                    +
-                  </div>
-                  <p className="mt-4 text-base leading-8 text-[#5F5142]">{benefit}</p>
-                </article>
+                  {drip}
+                </div>
               ))}
             </div>
           </div>
         </Reveal>
+      ) : null}
 
-        <Reveal className="mx-auto w-full max-w-[1440px] px-5 pb-24 sm:px-8 lg:px-14">
-          <SectionHeading
-            eyebrow="Procedure"
-            title="A clear premium treatment journey"
-            description="We break the procedure into a calm, digestible flow that feels high-end, reassuring, and easy to understand."
-            tone="dark"
-          />
+      {/* Home Service Banner: Kept as is, already uses the right colors */}
+      {service.homeServiceAvailable ? (
+        <Reveal className="mx-auto w-full max-w-[1440px] px-5 pt-16 sm:px-8 lg:px-14">
+          <div className="overflow-hidden rounded-[24px] bg-[linear-gradient(135deg,#1F3A5F,#284B76)] p-[1px] shadow-[0_20px_60px_rgba(31,58,95,0.16)]">
+            <div className="grid gap-5 rounded-[23px] bg-[linear-gradient(135deg,rgba(31,58,95,0.96),rgba(31,58,95,0.88))] px-6 py-7 sm:px-8 lg:grid-cols-[1fr_auto] lg:items-center">
+              <div>
+                <p className="text-sm uppercase tracking-[0.28em] text-[#EAC27A]">
+                  Home Service Availability
+                </p>
+                <h2 className="font-display mt-3 text-3xl text-white sm:text-4xl">
+                  Home service available in Delhi NCR
+                </h2>
+                <p className="mt-3 max-w-2xl text-sm leading-7 text-white/80">
+                  This treatment can be planned for select doorstep appointments with the same consultation-led care, comfort, and premium coordination.
+                </p>
+              </div>
+              {/* Changed secondary button in this context to keep it readable */}
+              <OpenContactButton className="premium-button whitespace-nowrap bg-[var(--gold)] hover:bg-[#B8962E] text-white">
+                Book Home Service
+              </OpenContactButton>
+            </div>
+          </div>
+        </Reveal>
+      ) : null}
 
-          <div className="relative mt-12">
-            <div className="absolute left-[10%] right-[10%] top-8 z-0 hidden h-[2px] bg-gradient-to-r from-[rgba(201,166,70,0.42)] via-[rgba(201,166,70,0.58)] to-[rgba(201,166,70,0.42)] lg:block" />
-            <div className="grid gap-6 lg:grid-cols-4">
+      {/* Highlights: White cards with bright gold borders */}
+      {service.keyHighlights?.length ? (
+        <Reveal className="mx-auto w-full max-w-[1440px] px-5 pt-12 sm:px-8 lg:px-14">
+          <div className="rounded-[24px] border border-[var(--english-blue)]/10 bg-white p-6 sm:p-8 shadow-xl shadow-[var(--english-blue)]/5">
+            <p className="text-sm uppercase tracking-[0.28em] text-[var(--gold)]">
+              Key Highlights
+            </p>
+            <div className="mt-5 grid gap-4 sm:grid-cols-3">
+              {service.keyHighlights.map((highlight) => (
+                <div
+                  key={highlight}
+                  className="rounded-[18px] border border-[var(--gold)]/30 bg-[var(--gold)] px-4 py-4 text-sm leading-7 text-[#fff]"
+                >
+                  {highlight}
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+      ) : null}
+
+      {/* Benefits: White cards, English Blue Icon, Muted Text */}
+      <Reveal className="mx-auto w-full max-w-[1440px] px-5 py-16 sm:px-8 lg:px-14">
+        <div className="grid gap-8 lg:grid-cols-[0.6fr_1.1fr]">
+          <div>
+            <SectionHeading
+              eyebrow="Benefits"
+              title="Why guests choose this treatment"
+              description="Higher absorption, instant revitalization, and faster nutrient delivery compared to standard oral supplements."
+              tone="dark"
+            />
+          </div>
+          <div className="grid gap-5 sm:grid-cols-4">
+            {service.benefits.map((benefit) => (
+              <article
+                key={benefit}
+                className="rounded-[18px]  bg-[var(--english-blue)]/90  p-5 shadow-lg shadow-[var(--english-blue)]/5"
+              >
+                {/* CHANGED: Benefits icon uses English Blue and Gold */}
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--gold)] text-sm font-semibold text-white">
+                  +
+                </div>
+                <p className="mt-4 text-base leading-8 text-[#fff]">{benefit}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </Reveal>
+
+      {/* Procedure: Swapped dark bg context for White and Bright Gold accents */}
+      <Reveal className="mx-auto w-full max-w-[1440px] px-5 pb-18 sm:px-8 lg:px-14">
+        <SectionHeading
+          eyebrow="Procedure"
+          title="A clear premium treatment journey"
+          description="We break the procedure into a calm, digestible flow that feels high-end, reassuring, and easy to understand."
+          tone="dark"
+        />
+
+        <div className="relative mt-8">
+
+          <div className="relative max-w-6xl mx-auto">
+
+            {/* ✅ LINE aligned to cards width */}
+            <div className="absolute inset-x-0 top-8 z-0 hidden h-[2px] bg-gradient-to-r from-[var(--gold)]/40 via-[var(--gold)] to-[var(--gold)]/40 lg:block" />
+
+            {/* ✅ CARDS */}
+            <div className={`grid gap-6 lg:grid-cols-${service.steps.length}`}>
               {service.steps.map((step, index) => (
                 <article
                   key={step}
-                  className="relative z-10 rounded-[24px] border border-[rgba(201,166,70,0.16)] bg-[#EEE8DF] p-6 shadow-[0_14px_40px_rgba(117,91,47,0.08)]"
+                  className="relative z-10 rounded-[20px] bg-[var(--english-blue)] p-6 shadow-xl shadow-[var(--english-blue)]/5"
                 >
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[rgba(201,166,70,0.24)] bg-[#FFFDF8] text-xl font-semibold text-[#A8821E]">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[var(--gold)] bg-white text-xl font-semibold text-[var(--gold)]">
                     {index + 1}
                   </div>
-                  <h3 className="font-display mt-5 text-2xl text-[#2C2C2C]">{step}</h3>
+
+                  <h4 className="font-display mt-5 text-lg text-[#fff]">
+                    {step}
+                  </h4>
                 </article>
               ))}
             </div>
           </div>
-        </Reveal>
+        </div>
+      </Reveal>
 
-        <Reveal className="mx-auto w-full max-w-[1440px] px-5 pb-24 sm:px-8 lg:px-14">
-          <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-            <div className="overflow-hidden rounded-[30px] border border-[rgba(201,166,70,0.18)] bg-[#EEE8DF] p-3 shadow-[0_24px_70px_rgba(121,95,49,0.12)]">
-              <div className="relative overflow-hidden rounded-[24px]">
-                <Image
-                  src="/images/before-after1.jpeg"
-                  alt={`${service.title} transformation example`}
-                  width={1200}
-                  height={900}
-                  className="h-[400px] w-full object-cover sm:h-[520px]"
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_28%,rgba(44,44,44,0.52)_100%)]" />
-                <div className="absolute bottom-0 left-0 p-7 text-white">
-                  <p className="text-sm uppercase tracking-[0.24em] text-[#EAC27A]">
-                    Before / After
-                  </p>
-                  <p className="mt-3 max-w-md text-base leading-7 text-white/86">
-                    Representative treatment results help clients understand the
-                    kind of texture, tone, and confidence improvements this
-                    service is designed to support.
-                  </p>
-                </div>
+      {/* Outcome: Swapped dark context for White and English Blue accents */}
+      <Reveal className="mx-auto w-full max-w-[1440px] px-5 pb-24 sm:px-8 lg:px-14">
+        <div className="grid gap-6 lg:grid-cols-[1fr_0.78fr]">
+          {/* Before After Card: Re-styled frame */}
+          <div className="overflow-hidden rounded-[24px] border border-[var(--english-blue)]/20 bg-white p-3 shadow-2xl shadow-[var(--english-blue)]/5">
+            <div className="relative h-[600px] overflow-hidden rounded-[20px]">
+              <Image
+                src="/images/before-after1.jpeg" // generic placeholder used
+                alt={`${service.title} transformation example`}
+                width={1200}
+                height={900}
+                className="h-[400px] w-full object-cover sm:h-[360px] lg:h-[400px]"
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_28%,rgba(17,17,17,0.72)_100%)]" />
+              <div className="absolute bottom-0 left-0 p-5 text-white sm:p-7">
+                <p className="text-sm uppercase tracking-[0.24em] text-[var(--gold)]">
+                  Before / After
+                </p>
+                <p className="mt-3 max-w-md text-base leading-7 text-white/86">
+                  Representative treatment results help clients understand the
+                  kind of texture, tone, and confidence improvements this
+                  service is designed to support.
+                </p>
               </div>
             </div>
-
-            <div className="rounded-[30px] border border-[rgba(201,166,70,0.18)] bg-[#EEE8DF] p-7 shadow-[0_24px_70px_rgba(121,95,49,0.1)]">
-              <SectionHeading
-                eyebrow="Expected Outcome"
-                title="What this treatment is designed to improve"
-                description={service.results}
-                tone="dark"
-              />
-              <OpenContactButton className="mt-8 bg-[#C9A646] hover:bg-[#B8962E]">
-                Book Consultation
-              </OpenContactButton>
-            </div>
           </div>
-        </Reveal>
-      </main>
-    </>
+
+          {/* Outcome Info: White card with English Blue and Gold elements */}
+          <div className="rounded-[24px] border border-[var(--english-blue)]/10 bg-white p-6 sm:p-7 shadow-xl shadow-[var(--english-blue)]/5">
+            <SectionHeading
+              eyebrow="Expected Outcome"
+              title="What this treatment improves"
+              description={
+                service.results ||
+                "This treatment is designed to improve visible skin quality, comfort, and confidence through a structured plan tailored to your goals."
+              }
+              tone="dark"
+            />
+            <div className="mt-6 space-y-3">
+              {service.benefits.slice(0, 3).map((item) => (
+                <div
+                  key={item}
+                  className="rounded-[16px] border border-[var(--gold)]/30 bg-[var(--gold)]/90 px-4 py-3 text-sm leading-7 text-[#fff]"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+            <OpenContactButton className="mt-8 bg-[var(--gold)] hover:bg-[#132855] text-white">
+              Book Consultation
+            </OpenContactButton>
+          </div>
+        </div>
+      </Reveal>
+    </main>
   );
 }
+
+
+

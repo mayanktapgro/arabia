@@ -9,22 +9,22 @@ export function FranchiseBenefits() {
         eyebrow="End-to-End Support"
         title="Displayed in the exact support format your franchise pitch needs"
         description="These are the core operating pillars behind the opportunity: theme, technology, marketing, location, customer support, and staffing systems."
-        tone="dark"
+        tone="light"
       />
 
       <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {supportPillars.map((item, index) => (
           <article
             key={item.title}
-            className="rounded-[24px] border border-[rgba(201,166,70,0.16)] bg-[#FFF7F4] p-6 shadow-[0_14px_40px_rgba(145,103,85,0.08)]"
+            className="bg-[var(--gold)] rounded-[24px] p-6 transition duration-300 hover:translate-y-[-4px] hover:shadow-[0_20px_40px_rgba(201,166,70,0.12)]"
           >
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[rgba(201,166,70,0.24)] bg-[#FFFDF8] text-lg font-semibold text-[#A8821E]">
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[rgba(201,166,70,0.24)] bg-[#FFF] text-lg font-semibold text-[#132855]">
               0{index + 1}
             </div>
-            <h3 className="font-display mt-5 text-2xl text-[#2C2C2C]">
+            <h3 className="font-display mt-5 text-2xl text-[#132855]">
               {item.title}
             </h3>
-            <p className="mt-3 text-sm leading-7 text-[#6A5B4A]">{item.copy}</p>
+            <p className="mt-3 text-sm leading-7 text-[#fff]">{item.copy}</p>
           </article>
         ))}
       </div>

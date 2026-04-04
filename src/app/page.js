@@ -1,14 +1,13 @@
 import dynamic from "next/dynamic";
-import { SiteFooter } from "@/components/shared/site-footer";
-import { SiteNavbar } from "@/components/shared/site-navbar";
 import { FloatingActionButton } from "@/components/shared/floating-action-button";
-import { HeroSlider } from "@/components/landing/HeroSlider";
+import { HeroSlider } from "@/components/hero/HeroSlider";
 import { ServicesSection } from "@/components/landing/ServicesSection";
 import { HighDemandSection } from "@/components/landing/HighDemandSection";
 import { HomeServicesBanner } from "@/components/landing/home-services-banner";
 import { FinalCta } from "@/components/landing/final-cta";
 import { SkeletonBlock } from "@/components/ui/skeleton-block";
-import AboutSection from "@/components/landing/About";
+import AboutSection from "@/components/landing/About"
+import WhatsApp from "@/components/landing/WhatsApp";
 
 const BeforeAfterShowcase = dynamic(
   () =>
@@ -38,21 +37,20 @@ const Testimonials = dynamic(
 export default function HomePage() {
   return (
     <>
-
-      <FloatingActionButton href="#book" label="Book Appointment" mode="modal" />
-      <main className="bg-[#F5F2EC] text-[#2C2C2C]">
+      {/* <FloatingActionButton href="#book" label="Book Appointment" mode="modal" /> */}
+      <main className="lux-bg text-[var(--text)]">
         <HeroSlider />
-        <AboutSection />
+        <HomeServicesBanner />
         <ServicesSection />
-        <div className="bg-[#F5F2EC]">
+        <AboutSection />
+        <div className="lux-bg">
           <BeforeAfterShowcase />
         </div>
         <HighDemandSection />
-        <HomeServicesBanner />
         <Testimonials />
         <FinalCta />
+        <WhatsApp />
       </main>
-
     </>
   );
 }

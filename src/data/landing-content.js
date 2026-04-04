@@ -9,7 +9,7 @@ export const heroSlides = [
       "Science-led skin rejuvenation, warm hospitality, and luminous treatment journeys designed for guests who expect visible refinement.",
     primaryCta: "Book Appointment",
     secondaryCta: "Explore Treatments",
-    backgroundImage: "/arviaData/reception1.jpeg",
+    backgroundImage: "/profile/intro-pics/slide-3.jpg",
     foregroundImage: "/images/hero1.jpeg",
   },
   {
@@ -31,12 +31,12 @@ export const heroSlides = [
       "Luxury facials, brightening protocols, and anti-aging care tailored for clients who want instant elegance and long-term skin quality.",
     primaryCta: "Book Appointment",
     secondaryCta: "Explore Treatments",
-    backgroundImage: "/arviaData/reception2.jpeg",
+    backgroundImage: "/profile/intro-pics/slide-2.jpg",
     foregroundImage: "/images/hydrafacial.jpeg",
   },
 ];
 
-export const topServices = featuredServiceSlugs.map((slug) =>
+export const topServices = featuredServiceSlugs.slice(0, 10).map((slug) =>
   servicesData.find((service) => service.slug === slug)
 );
 

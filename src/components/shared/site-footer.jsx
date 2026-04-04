@@ -2,13 +2,6 @@
 
 import { Phone } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-
-// const footerLinks = {
-//   About: ["Our story", "Medical team", "Technology", "Reviews"],
-//   Treatments: ["Laser Hair Removal", "Hydrafacial", "Anti-Aging", "Acne Treatment"],
-//   Locations: ["Riyadh", "Dubai"],
-// };
 
 const footerLinks = {
   Company: [
@@ -22,22 +15,9 @@ const footerLinks = {
     { label: "Laser Photofacial", slug: "laser-photofacial" },
     { label: "HIFU Body Tightening", slug: "hifu-body-tightening" },
     { label: "CO2 Fractional Laser", slug: "co2-fractional-laser" },
-    { label: "RF Skin Tightening", slug: "rf-skin-tightening" },
-    // { label: "Tattoo Removal", slug: "tattoo-removal" },
-    // { label: "Scar & Birthmark Removal", slug: "scar-birthmark-removal" },
-    // { label: "Pigmentation Removal", slug: "pigmentation-removal" },
-    // { label: "Milia Treatment", slug: "milia-treatment" },
-    // { label: "Diet Consultation", slug: "diet-consultation" },
-    // { label: "Hydrafacial", slug: "hydrafacial" },
-    // { label: "Collagen Induction Therapy", slug: "collagen-induction" },
-    // { label: "Insta Glow Facial", slug: "insta-glow-facial" },
-    // { label: "AI Face Analysis", slug: "ai-face-analysis" },
-    // { label: "Body Therapies", slug: "body-therapies" },
-    // { label: "Chemical Peels", slug: "chemical-peels" },
-    // { label: "Permanent Eyebrows", slug: "permanent-eyebrows" },
-    // { label: "Lip Care", slug: "lip-care" },
+    { label: "RF Skin Tightening", slug: "rf-skin-tightening-therapy" },
   ],
-  Locations: ["Riyadh", "Dubai"],
+  Locations: ["Delhi NCR", "Dubai", "Riyadh"],
 };
 
 function InstagramIcon() {
@@ -67,8 +47,6 @@ function YouTubeIcon() {
 }
 
 export function SiteFooter() {
-  const pathname = usePathname();
-  const isFranchise = pathname === "/franchise";
   const socials = [
     { label: "Instagram", icon: <InstagramIcon /> },
     { label: "Facebook", icon: <FacebookIcon /> },
@@ -76,127 +54,108 @@ export function SiteFooter() {
   ];
 
   return (
-    <footer
-      className={`border-t border-[rgba(201,166,70,0.16)] ${isFranchise ? "bg-[#F7E4DE]" : "bg-[#F0E8DC]"
-        }`}
-    >
+    <footer className="border-t border-[rgba(212,175,55,0.18)] bg-[#132855]">
       <div className="mx-auto grid w-full max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.1fr_repeat(4,0.7fr)] lg:px-8">
         <div>
-          <p className="font-display text-3xl text-[#2C2C2C]">Arbia Aesthetics</p>
-          <p className="mt-4 max-w-sm text-sm leading-7 text-[#6B5A48]">
-            Premium skincare, dermatology, and aesthetic experiences designed
-            to feel elegant, warm, and deeply trustworthy under a modern Arabic luxury identity.
+          <p className="font-display text-3xl text-white"> <img src="/arviaData/arvia-logo-new.png" alt="Arvia Wellness" className="h-12 w-12 inline-block mr-3" /> Arvia Wellness</p>
+          <p className="mt-4 max-w-sm text-sm leading-7 text-white/70">
+            Premium skincare, dermatology, and aesthetic experiences shaped with
+            elegant hospitality, trusted care, and a refined luxury presence.
           </p>
-          <div className="mt-6 flex border w-max items-center gap-4 rounded-full border-[rgba(201,166,70,0.18)] bg-[#FAF5EC] px-4 py-2 text-sm text-[#6B5A48]">
+          {/* <div className="mt-6 flex w-max items-center gap-4 rounded-full border border-[rgba(212,175,55,0.22)] bg-white/8 px-4 py-2 text-sm text-white/75">
             <div className="flex gap-4">
               {socials.map((item) => (
                 <a
                   key={item.label}
                   href="#top"
                   aria-label={item.label}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(201,166,70,0.18)] bg-[#FAF5EC] text-[#A8821E] transition hover:border-[rgba(201,166,70,0.4)] hover:bg-[#FFF7E9] hover:text-[#8B6515]"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(212,175,55,0.22)] bg-white/8 text-[#D4AF37] transition hover:border-[rgba(212,175,55,0.48)] hover:bg-[rgba(212,175,55,0.12)] hover:text-white"
                 >
                   {item.icon}
                 </a>
               ))}
             </div>
-            <a href="tel:+917678115756" className="flex items-center gap-2 hover:underline cursor-pointer">
+            <a href="tel:+917678115756" className="flex items-center gap-2 hover:underline">
               <Phone className="h-4 w-4" />
               +91 7678115756
             </a>
-          </div>
+          </div> */}
         </div>
-
-        {/* {Object.entries(footerLinks).map(([title, links]) => (
-          <div key={title}>
-            <p className="text-sm font-semibold text-[#2C2C2C]">{title}</p>
-            <div className="mt-4 space-y-3 text-sm text-[#6B5A48]">
-
-              {links.map((item) => {
-                if (item.slug) {
-                  return (
-                    <Link
-                      key={item.slug}
-                      href={`/services/${item.slug}`}
-                      className="block transition duration-200 hover:text-[#C9A646] hover:translate-x-1"
-                    >
-                      {item.label}
-                    </Link>
-                  );
-                }
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block transition duration-200 hover:text-[#C9A646] hover:translate-x-1"
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        ))} */}
 
         {Object.entries(footerLinks).map(([title, links]) => (
           <div key={title}>
-            <p className="text-sm font-semibold text-[#2C2C2C]">{title}</p>
-
-            <div className="mt-4 space-y-3 text-sm text-[#6B5A48]">
-              {/* COMPANY */}
+            <p className="text-sm font-semibold text-white">{title}</p>
+            <div className="mt-4 space-y-3 text-sm text-white/70">
               {title === "Company" &&
                 links.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="block transition duration-200 hover:text-[#C9A646] hover:translate-x-1"
+                    className="block transition duration-200 hover:text-[#D4AF37] hover:translate-x-1"
                   >
                     {item.label}
                   </Link>
                 ))}
 
-              {/* TREATMENTS */}
               {title === "Treatments" &&
                 links.map((item) => (
                   <Link
                     key={item.slug}
                     href={`/services/${item.slug}`}
-                    className="block transition duration-200 hover:text-[#C9A646] hover:translate-x-1"
+                    className="block transition duration-200 hover:text-[#D4AF37] hover:translate-x-1"
                   >
                     {item.label}
                   </Link>
                 ))}
 
-              {/* LOCATIONS */}
-              {title === "Locations" &&
-                links.map((item) => <p key={item}>{item}</p>)}
+              {title === "Locations" && links.map((item) => <p key={item}>{item}</p>)}
             </div>
           </div>
         ))}
 
         <div>
-          <p className="text-sm font-semibold text-[#2C2C2C]">Franchise</p>
+          <p className="text-sm font-semibold text-white">Franchise</p>
           <Link
             href="/franchise"
-            className="mt-4 inline-flex rounded-full border border-[rgba(201,166,70,0.28)] bg-[#FFF8EB] px-4 py-2 text-sm font-medium text-[#A8821E]"
+            className="mt-4 inline-flex w-50 rounded-full border border-[rgba(212,175,55,0.32)] bg-white/8 px-4 py-2 text-sm font-medium text-[#D4AF37]"
           >
-            Franchise Opportunities
+            <span className="text-white">
+              Franchise Opportunities
+            </span>
           </Link>
-          <form className="mt-5 space-y-3">
+          <div className="mt-6 flex flex-col w-max items-start gap-8 rounded-full  border-[rgba(212,175,55,0.22)]  px-4 py-2 text-sm text-white/75">
+            <a href="tel:+917678115756" className="flex items-center gap-2 hover:underline">
+              <Phone className="h-4 w-4" />
+              <span className="border-b text-lg">+91 7678115756</span>
+            </a>
+            <div className="flex gap-4">
+              {socials.map((item) => (
+                <a
+                  key={item.label}
+                  href="#top"
+                  aria-label={item.label}
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(212,175,55,0.22)] bg-white/8 text-[#D4AF37] transition hover:border-[rgba(212,175,55,0.48)] hover:bg-[rgba(212,175,55,0.12)] hover:text-white"
+                >
+                  {item.icon}
+                </a>
+              ))}
+            </div>
+          </div>
+          {/* <form className="mt-5 space-y-3">
             <input
               type="email"
-              className="premium-input border-[rgba(201,166,70,0.16)] bg-[#FAF5EC] text-[#2C2C2C]"
+              className="premium-input border-[rgba(212,175,55,0.2)] bg-white/90 text-[#0F172A]"
               placeholder="Enter your email"
             />
             <button
               type="button"
-              className="w-full rounded-full bg-[#2C2C2C] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#1E1E1E]"
+              className="w-full rounded-full bg-[#D4AF37] px-4 py-3 text-sm font-semibold text-[#132855] transition hover:brightness-105"
             >
               Join newsletter
             </button>
-          </form>
+          </form> */}
         </div>
       </div>
-    </footer >
+    </footer>
   );
 }

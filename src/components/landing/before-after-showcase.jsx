@@ -20,7 +20,7 @@ export function BeforeAfterShowcase() {
         tone="dark"
       />
 
-      <div className="relative mt-12 overflow-hidden rounded-[24px] border border-[rgba(201,166,70,0.16)] bg-[#EEE8DF] p-4 shadow-[0_18px_55px_rgba(121,95,49,0.1)] sm:p-6">
+      <div className="premium-card relative mt-4 overflow-hidden rounded-[22px] p-4 sm:p-5">
         {!loaded && <SkeletonBlock className="absolute inset-4 z-10 rounded-[20px]" />}
 
         <div className="relative overflow-hidden rounded-[20px]">
@@ -29,7 +29,7 @@ export function BeforeAfterShowcase() {
             alt="Before skincare treatment"
             width={1200}
             height={720}
-            className="h-[26rem] w-full object-cover"
+            className="h-[20rem] w-full object-cover sm:h-[22rem]"
             onLoad={() => setLoaded(true)}
           />
 
@@ -43,13 +43,13 @@ export function BeforeAfterShowcase() {
                 alt="After skincare treatment"
                 width={1200}
                 height={720}
-                className="h-[26rem] w-full object-cover"
+                className="h-[20rem] w-full object-cover sm:h-[22rem]"
               />
             </div>
           </div>
 
           <div
-            className="absolute inset-y-0 z-20 w-1 bg-white/[0.9]"
+            className="absolute inset-y-0 z-20 w-1 bg-white"
             style={{ right: `${position}%` }}
           >
             <div className="absolute left-1/2 top-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/[0.35] bg-[var(--gold)] text-black shadow-xl">
@@ -57,10 +57,10 @@ export function BeforeAfterShowcase() {
             </div>
           </div>
 
-          <div className="absolute left-5 top-5 rounded-full bg-[rgba(44,44,44,0.72)] px-4 py-2 text-sm text-white">
+          <div className="absolute left-4 top-4 rounded-full bg-[rgba(44,44,44,0.78)] px-3 py-1.5 text-xs font-medium text-white sm:left-5 sm:top-5 sm:px-4 sm:py-2 sm:text-sm">
             Before
           </div>
-          <div className="absolute right-5 top-5 rounded-full bg-[var(--gold)] px-4 py-2 text-sm font-semibold text-black">
+          <div className="absolute right-4 top-4 rounded-full bg-[var(--gold)] px-3 py-1.5 text-xs font-semibold text-black sm:right-5 sm:top-5 sm:px-4 sm:py-2 sm:text-sm">
             After
           </div>
         </div>
@@ -72,7 +72,7 @@ export function BeforeAfterShowcase() {
           max="80"
           value={position}
           onChange={(event) => setPosition(Number(event.target.value))}
-          className="mt-6 w-full accent-[var(--gold)]"
+          className="mt-4 w-full accent-[var(--gold)]"
         />
       </div>
     </Reveal>

@@ -1,16 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f5f2ec;
-  --bg-soft: #eee8df;
-  --surface: rgba(255, 255, 255, 0.72);
-  --surface-strong: rgba(255, 255, 255, 0.88);
+  --bg: #f7f3ee;
+  --bg-soft: #ede6dc;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: rgba(255, 255, 255, 0.92);
   --text: #2c2c2c;
   --muted: #6a5b4a;
-  --line: rgba(201, 166, 70, 0.18);
+  --line: rgba(201, 166, 70, 0.15);
   --gold: #c9a646;
-  --beige: #d8c3a5;
-  --shadow: 0 24px 90px rgba(121, 95, 49, 0.12);
+  --gold-soft: #eac27a;
+  --gold-hover: #b8962e;
+  --blue: #1f3a5f;
+  --beige: #f1e8da;
+  --shadow: 0 24px 80px rgba(44, 44, 44, 0.08);
+  /* Existing variables... */
+
+  /* Define English Blue */
+  --english-blue: #1C3F60;
+
 }
 
 @theme inline {
@@ -31,9 +39,9 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(201, 161, 74, 0.12), transparent 28%),
-    radial-gradient(circle at top right, rgba(255, 255, 255, 0.58), transparent 18%),
-    linear-gradient(180deg, #f5f2ec, #f5f2ec);
+    radial-gradient(circle at top left, rgba(234, 194, 122, 0.16), transparent 24%),
+    radial-gradient(circle at top right, rgba(31, 58, 95, 0.05), transparent 18%),
+    linear-gradient(180deg, #f7f3ee, #f5f1eb 42%, #ede6dc 100%);
   color: var(--text);
   font-family: var(--font-cairo), sans-serif;
 }
@@ -55,70 +63,119 @@ select {
 }
 
 ::selection {
-  background: rgba(201, 161, 74, 0.24);
-  color: #2c2c2c;
+  background: rgba(212, 175, 55, 0.28);
+  color: #0f172a;
 }
 
 .font-display {
   font-family: var(--font-playfair), serif;
 }
 
+.lux-bg {
+  background:
+    radial-gradient(circle at top left, rgba(234, 194, 122, 0.12), transparent 20%),
+    radial-gradient(circle at bottom right, rgba(31, 58, 95, 0.05), transparent 18%),
+    linear-gradient(180deg, #f7f3ee, #f3ede5 46%, #ede6dc 100%);
+}
+
+.lux-card {
+  border: 1px solid rgba(201, 166, 70, 0.15);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78));
+  box-shadow: 0 18px 55px rgba(44, 44, 44, 0.07);
+  backdrop-filter: blur(10px);
+}
+
+.lux-glow {
+  box-shadow:
+    0 0 0 1px rgba(201, 166, 70, 0.22),
+    0 20px 70px rgba(201, 166, 70, 0.12);
+}
+
+.lux-border {
+  border: 1px solid rgba(201, 166, 70, 0.15);
+}
+
 .section-shell {
   margin-inline: auto;
   width: min(100%, 1200px);
-  padding: 96px 24px;
+  /* padding: 22px 10px; */
 }
 
 .section-card {
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.56));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.76));
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
 }
 
 .luxury-grid {
   background-image:
-    linear-gradient(rgba(201, 166, 70, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201, 166, 70, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
   background-size: 42px 42px;
 }
 
 .gold-ring {
-  box-shadow: 0 0 0 1px rgba(201, 161, 74, 0.3), 0 18px 40px rgba(121, 95, 49, 0.18);
+  box-shadow: 0 0 0 1px rgba(201, 166, 70, 0.24), 0 18px 40px rgba(44, 44, 44, 0.1);
 }
 
 .premium-input {
   width: 100%;
   border-radius: 18px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.92);
   color: var(--text);
   padding: 0.95rem 1rem;
   outline: none;
 }
 
 .premium-input::placeholder {
-  color: #9a8874;
+  color: #8b7b68;
 }
 
 .premium-input:focus {
-  border-color: rgba(201, 161, 74, 0.65);
-  box-shadow: 0 0 0 4px rgba(201, 161, 74, 0.12);
+  border-color: rgba(201, 166, 70, 0.58);
+  box-shadow: 0 0 0 4px rgba(201, 166, 70, 0.12);
 }
 
 .animated-gradient {
   background:
-    radial-gradient(circle at 20% 20%, rgba(201, 161, 74, 0.28), transparent 26%),
-    radial-gradient(circle at 80% 24%, rgba(255, 255, 255, 0.48), transparent 20%),
-    radial-gradient(circle at 60% 75%, rgba(201, 161, 74, 0.12), transparent 30%),
-    linear-gradient(135deg, #f5f2ec 0%, #eee8df 55%, #f5f2ec 100%);
+    radial-gradient(circle at 20% 20%, rgba(201, 166, 70, 0.18), transparent 26%),
+    radial-gradient(circle at 80% 24%, rgba(255, 255, 255, 0.06), transparent 20%),
+    radial-gradient(circle at 60% 75%, rgba(201, 166, 70, 0.08), transparent 30%),
+    linear-gradient(135deg, #1f3a5f 0%, #284d7c 52%, #17304f 100%);
   background-size: 140% 140%;
   animation: floatGradient 14s ease-in-out infinite;
 }
 
+.premium-card {
+  border: 1px solid rgba(201, 166, 70, 0.15);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 16px 44px rgba(44, 44, 44, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.premium-button {
+  background: linear-gradient(135deg, #c9a646, #eac27a);
+  color: #2c2c2c;
+  box-shadow: 0 12px 32px rgba(201, 166, 70, 0.18);
+}
+
+.glass-navbar {
+  background: rgba(247, 243, 238, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201, 166, 70, 0.15);
+}
+
+.section-wrapper {
+  margin-inline: auto;
+  width: min(100%, 1440px);
+  padding-inline: 1.25rem;
+}
+
 select option {
-  background: #FFF8EB;
-  color: #2C2C2C;
+  background: #ffffff;
+  color: #0f172a;
 }
 
 .testimonial-mask {
@@ -137,10 +194,8 @@ select option {
   }
 }
 
-
-
 @media (min-width: 768px) {
   .section-shell {
-    padding: 112px 32px;
+    padding: 88px 32px;
   }
 }

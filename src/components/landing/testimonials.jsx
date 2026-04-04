@@ -28,7 +28,7 @@ export function Testimonials() {
   return (
     <Reveal
       id="testimonials"
-      className="mx-auto w-full max-w-[1440px] px-5 py-24 sm:px-8 lg:px-14"
+      className="mx-auto w-full max-w-[1440px] px-5 py-8 sm:px-8 lg:px-14"
     >
       <SectionHeading
         eyebrow="Testimonials"
@@ -37,43 +37,43 @@ export function Testimonials() {
         tone="dark"
       />
 
-      <div className="mt-12 overflow-hidden" ref={emblaRef}>
-        <div className="-ml-6 flex">
+      <div className="mt-10 overflow-hidden" ref={emblaRef}>
+        <div className="-ml-5 flex">
           {testimonials.map((item, index) => (
             <div
               key={`${item.name}-${item.treatment}`}
-              className="min-w-0 flex-[0_0_92%] pl-6 sm:flex-[0_0_56%] lg:flex-[0_0_34%]"
+              className="min-w-0 flex-[0_0_92%] pl-5 sm:flex-[0_0_54%] lg:flex-[0_0_34%]"
             >
               <motion.article
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ delay: index * 0.04, duration: 0.4 }}
-                className="h-full rounded-[26px] border border-[rgba(201,166,70,0.18)] bg-[#EEE8DF] p-6 shadow-[0_18px_50px_rgba(122,98,57,0.1)]"
+                className="premium-card h-full rounded-[22px] p-6"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[linear-gradient(135deg,#C9A646,#EAC27A)] text-lg font-semibold text-white shadow-[0_12px_30px_rgba(201,166,70,0.22)]">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[linear-gradient(135deg,#D4AF37,#E7C968)] text-base font-semibold text-[var(--text)] shadow-[0_12px_30px_rgba(212,175,55,0.18)]">
                     {item.name
                       .split(" ")
                       .map((part) => part[0])
                       .join("")}
                   </div>
                   <div>
-                    <p className="text-lg font-semibold text-[#2C2C2C]">{item.name}</p>
-                    <p className="text-sm text-[#8C7760]">{item.country}</p>
+                    <p className="text-lg font-semibold text-[var(--text)]">{item.name}</p>
+                    <p className="text-sm text-[var(--muted)]">{item.country}</p>
                   </div>
                 </div>
 
                 <div className="mt-6 flex items-center justify-between gap-4">
-                  <p className="rounded-full bg-[#F5F2EC] px-3 py-1 text-xs uppercase tracking-[0.2em] text-[#A8821E]">
+                  <p className="rounded-full border border-[rgba(201,166,70,0.18)] bg-[rgba(201,166,70,0.08)] px-3 py-1 text-xs uppercase tracking-[0.2em] text-[var(--gold)]">
                     {item.treatment}
                   </p>
-                  <p className="text-sm font-semibold tracking-[0.12em] text-[#A8821E]">
+                  <p className="text-sm font-semibold tracking-[0.12em] text-[var(--gold)]">
                     {Array.from({ length: item.rating }, () => "\u2605").join("")}
                   </p>
                 </div>
 
-                <p className="mt-5 text-sm leading-8 text-[#5F5142]">
+                <p className="mt-5 text-sm leading-8 text-[var(--muted)]">
                   &quot;{item.quote}&quot;
                 </p>
               </motion.article>

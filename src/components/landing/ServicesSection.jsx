@@ -28,21 +28,21 @@ export function ServicesSection() {
   return (
     <Reveal
       id="services"
-      className="mx-auto w-full max-w-[1440px] px-5 py-24 sm:px-8 lg:px-14"
+      className=" w-full max-w-full bg-gradient-to-br from-[#FFF8EB] via-[#F5EAD7] to-[#EAC27A]/30 rounded px-5 py-8 sm:px-8 lg:px-14"
     >
       <SectionHeading
         eyebrow="Top Services"
-        title="Signature treatments presented with clinical precision and luxury calm"
+        title="Clinically precise, luxuriously calm signature treatments."
         description="The services carousel now uses one structured treatment dataset, so the homepage, mega menu, and dynamic service pages all stay aligned."
         tone="dark"
       />
 
-      <div className="mt-12 overflow-hidden" ref={emblaRef}>
-        <div className="-ml-6 flex">
+      <div className="mt-10 overflow-hidden" ref={emblaRef}>
+        <div className="-ml-5 flex">
           {topServices.map((service, index) => (
             <div
               key={service.slug}
-              className="min-w-0 flex-[0_0_86%] pl-6 sm:flex-[0_0_48%] lg:flex-[0_0_31%] xl:flex-[0_0_20%]"
+              className="min-w-0 flex-[0_0_84%] pl-5 sm:flex-[0_0_48%] lg:flex-[0_0_31%] xl:flex-[0_0_20%]"
             >
               <ServiceCard
                 service={service} 

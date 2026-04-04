@@ -50,7 +50,7 @@ export function FranchiseStatsSection() {
         eyebrow="ROI Highlights"
         title="Built to create early momentum with premium operational support"
         description="These numbers frame the opportunity like a polished business proposition: fast-launch energy, targeted ROI, and structured support from day one."
-        tone="dark"
+        tone="light"
       />
 
       <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -61,16 +61,16 @@ export function FranchiseStatsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ delay: index * 0.07, duration: 0.4 }}
-            className="rounded-[24px] border border-[rgba(201,166,70,0.16)] bg-[#FFF7F4] p-6 shadow-[0_16px_45px_rgba(145,103,85,0.08)]"
+            className="bg-[var(--gold)]  rounded-[24px] p-6"
           >
-            <p className="text-xs uppercase tracking-[0.26em] text-[#A8821E]">
+            <p className="text-xs uppercase tracking-[0.26em] text-[#fff]">
               {item.kicker}
             </p>
-            <p className="font-display mt-4 text-5xl text-[#2C2C2C]">
+            <p className="font-display mt-4 text-5xl text-[#132855]">
               <CountUp value={item.value} suffix={item.suffix} />
             </p>
-            <p className="mt-3 text-base text-[#2C2C2C]">{item.label}</p>
-            <p className="mt-3 text-sm leading-7 text-[#6A5B4A]">{item.copy}</p>
+            <p className="mt-3 text-base text-[#fff]">{item.label}</p>
+            <p className="mt-3 text-sm leading-7 text-[#fff]">{item.copy}</p>
           </motion.article>
         ))}
       </div>
