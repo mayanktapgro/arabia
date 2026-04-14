@@ -33,7 +33,8 @@ export function Testimonials() {
       <SectionHeading
         eyebrow="Testimonials"
         title="Guests from across the region and Europe return for visible, confidence-led results"
-        description="The section is now a premium carousel with richer testimonial volume, stronger treatment context, and a more editorial card layout."
+        description="Hear from our clients who trust us for transformative results, expert care, and a truly luxurious treatment experience."
+        // description="The section is now a premium carousel with richer testimonial volume, stronger treatment context, and a more editorial card layout."
         tone="dark"
       />
 

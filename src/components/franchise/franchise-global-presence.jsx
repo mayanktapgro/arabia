@@ -7,8 +7,8 @@ export function FranchiseGlobalPresence() {
     <Reveal className="mx-auto w-full max-w-[1440px] px-5 pb-24 sm:px-8 lg:px-14">
       <SectionHeading
         eyebrow="Global Presence"
-        title="Positioned for premium cities, regional growth, and master expansion"
-        description="The page now closes with a stronger business-development frame: flagship city presence, regional credibility, and territory-scale ambition."
+        title="Built for premium markets and scalable growth"
+        description="From key metro cities to emerging regions, our model is designed for strong market positioning and long-term expansion."
         tone="light"
       />
 

@@ -15,7 +15,8 @@ export function BeforeAfterShowcase() {
       <SectionHeading
         eyebrow="Transformation"
         title="Real Results. Real People."
-        description="An interactive before-and-after slider gives your visitors instant confidence and visually proves that the treatment journey works."
+        description="Explore real transformations that showcase visible results, personalized care, and the confidence our treatments bring to every client."
+        // description="An interactive before-and-after slider gives your visitors instant confidence and visually proves that the treatment journey works."
         align="center"
         tone="dark"
       />

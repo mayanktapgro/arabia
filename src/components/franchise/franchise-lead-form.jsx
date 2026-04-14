@@ -62,8 +62,8 @@ Please share complete franchise details.`;
         <div>
           <SectionHeading
             eyebrow="Apply Now"
-            title="Share your details and our team will take the next step with you"
-            description="The form is simplified exactly as requested. It now keeps only the essentials needed to begin the franchise conversation."
+            title="Share your details and our team will connect with you"
+            description="Provide your basic information and our team will guide you through the next steps of your franchise journey."
             tone="light"
           />
         </div>

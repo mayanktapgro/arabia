@@ -7,8 +7,8 @@ export function FranchiseSuccessStories() {
     <Reveal className="mx-auto w-full max-w-[1440px] px-5 pb-24 sm:px-8 lg:px-14">
       <SectionHeading
         eyebrow="Operator Advantage"
-        title="A stronger commercial system built for growth, marketing, training, and returns"
-        description="This section now reflects the actual operator advantage: business support, marketing assistance, training programs, and a high-ROI model."
+        title="A complete support system designed for your growth"
+        description="From marketing and operations to training and ongoing support, our model is built to help you scale confidently and achieve strong returns."
         tone="light"
       />
 

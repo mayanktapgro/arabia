@@ -10,8 +10,8 @@ export function FranchiseProcess() {
     <Reveal className="mx-auto w-full max-w-[1440px] px-5 pb-24 sm:px-8 lg:px-14">
       <SectionHeading
         eyebrow="Process"
-        title="A structured path from first call to clinic launch"
-        description="The timeline stays simple and premium: we help you move from enquiry to market mapping, setup, staffing, and launch."
+        title="A refined journey from consultation to successful clinic launch"
+        description="From your first discussion to location setup, training, and launch, we guide you through every step with a structured, premium, and fully supported process."
         tone="light"
       />
 

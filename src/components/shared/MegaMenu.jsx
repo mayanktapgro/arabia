@@ -10,7 +10,7 @@ export function MegaMenu({ isOpen, handleClose, isScrolled, onMouseEnter, onMous
     <div className="relative" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       <button
         type="button"
-        className={`flex items-center gap-2 cursor-pointer text-sm transition text-[#2C2C2C] `}
+        className={`flex items-center gap-2 brightness-135 cursor-pointer text-sm transition font-extrabold text-[var(--gold)]`}
       >
         Services
         <span className={`text-xs ${isScrolled ? "text-[#C9A646]" : "text-[#EAC27A]"}`}>+</span>

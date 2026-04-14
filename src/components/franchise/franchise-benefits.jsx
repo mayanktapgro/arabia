@@ -7,8 +7,8 @@ export function FranchiseBenefits() {
     <Reveal className="mx-auto w-full max-w-[1440px] px-5 pb-24 sm:px-8 lg:px-14">
       <SectionHeading
         eyebrow="End-to-End Support"
-        title="Displayed in the exact support format your franchise pitch needs"
-        description="These are the core operating pillars behind the opportunity: theme, technology, marketing, location, customer support, and staffing systems."
+        title="A fully managed support system built for long-term clinic success"
+        description="Every element—from branding and technology to marketing, hiring, and operations—is carefully structured to deliver a smooth, scalable, and high-performance business experience."
         tone="light"
       />
 

@@ -64,7 +64,7 @@ export function SiteNavbar() {
   const isFranchise = pathname === "/franchise";
 
   return (
-    <header className="sticky top-0 z-[90] glass-navbar shadow-sm">
+    <header className="sticky top-0 z-[90] bg-[var(--english-blue)]/80 shadow-sm">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
 
         {/* LOGO */}
@@ -74,13 +74,13 @@ export function SiteNavbar() {
             alt="Arvia Wellness Logo"
             width={55}
             height={55}
-            className="rounded-xl border border-[rgba(201,166,70,0.2)]"
+            className="rounded-xl border brightness-300 border-[rgba(201,166,70,0.2)]"
           />
           <div>
-            <p className={`font-display text-2xl ${isScrolled ? "text-[#2C2C2C]" : "text-black/90"}`}>
+            <p className={`font-bold text-2xl brightness-120 text-[var(--gold)]`}>
               Arvia Wellness
             </p>
-            <p className={`text-xs hidden md:block uppercase tracking-[0.24em] ${isScrolled ? "text-[#6A5B4A]" : "text-black/80"}`}>
+            <p className={`text-xs hidden md:block uppercase brightness-125 tracking-[0.24em] font-semibold text-2xl text-[var(--gold-soft)]`}>
               Luxury dermatology and wellness care
             </p>
           </div>
@@ -100,9 +100,11 @@ export function SiteNavbar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`text-sm hover:scale-105 transition ${isScrolled ? "text-[#2C2C2C] hover:text-[#C9A646]" : "text-white/82 hover:text-white"}`}
+              className={`hover:scale-105 transition`}
             >
-              {item.label}
+              <span className={`text-sm hover:scale-105 transition brightness-115 font-bold text-[var(--gold)]`}>
+                {item.label}
+              </span>
             </Link>
           ))}
         </nav>

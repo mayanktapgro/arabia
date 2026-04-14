@@ -52,7 +52,7 @@ export function SlideThree() {
         <div className="lux-card lux-glow overflow-hidden rounded-[34px] p-3">
           <div className="relative overflow-hidden rounded-[28px]">
             <Image
-              src="/arviaData/reception3.jpeg"
+              src="/arviaData/reception5.jpeg"
               alt="Franchise clinic interior"
               width={1200}
               height={900}

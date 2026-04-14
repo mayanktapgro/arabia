@@ -20,7 +20,7 @@ export function HeroSlider() {
     Autoplay({
       delay: 6000,
       stopOnInteraction: false,
-      stopOnMouseEnter: true,
+      stopOnMouseEnter: false,
     })
   );
 
@@ -56,32 +56,32 @@ export function HeroSlider() {
             },
             {
               id: "delhi-services",
-              bg: "/arviaData/reception2.jpeg",
+              bg: "/arviaData/reception5.jpeg",
               overlay:
                 "bg-[linear-gradient(90deg,rgba(19,40,85,0.9),rgba(19,40,85,0.6),transparent)]",
               Component: SlideTwo,
             },
             {
               id: "franchise",
-              bg: "/arviaData/reception3.jpeg",
+              bg: "/arviaData/reception5.jpeg",
               overlay:
                 "bg-[linear-gradient(90deg,rgba(19,40,85,0.9),rgba(19,40,85,0.6),transparent)]",
               Component: SlideThree,
             },
             {
               id: "services",
-              bg: "/arviaData/reception1.jpeg",
+              bg: "/arviaData/reception5.jpeg",
               overlay:
                 "bg-[linear-gradient(90deg,rgba(19,40,85,0.9),rgba(19,40,85,0.6),transparent)]",
               Component: SlideFour,
             },
-          ].map((slide) => {
+          ].map((slide, index) => {
             const Comp = slide.Component;
             return (
               <div key={slide.id} className="relative flex-[0_0_100%]">
                 <Image src={slide.bg} alt="" fill className="object-cover" />
                 <div className={`absolute inset-0 ${slide.overlay}`} />
-                <Comp />
+                <Comp isActive={selectedIndex === index} />
               </div>
             );
           })}
@@ -98,7 +98,7 @@ export function HeroSlider() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(245,242,236,0.92),rgba(245,242,236,0.5))]" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(245,242,236,0.40),rgba(245,242,236,0.5))]" />
               </div>
 
               {/* Content */}
@@ -110,7 +110,7 @@ export function HeroSlider() {
                   animate={{ opacity: 1, x: 0 }}
                   className="max-w-lg"
                 >
-                  <p className="text-sm uppercase tracking-[0.3em] text-[#C9A646]">
+                  <p className="text-sm uppercase tracking-[0.3em] text-[#fff]">
                     {slide.eyebrow}
                   </p>
 
@@ -118,7 +118,7 @@ export function HeroSlider() {
                     {slide.title}
                   </h2>
 
-                  <p className="mt-3 text-sm leading-6 text-[#6A5B4A]">
+                  <p className="mt-3 text-sm leading-6 text-[#000000]/80">
                     {slide.description}
                   </p>
 

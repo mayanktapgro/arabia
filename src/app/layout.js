@@ -18,6 +18,9 @@ export const metadata = {
   title: "Arbia Aesthetics",
   description:
     "Premium skincare, dermatology, and franchise opportunity platform.",
+  icons: {
+    icon: "/arviaData/arvia-logo-new2.png",
+  },
 };
 
 export default function RootLayout({ children }) {

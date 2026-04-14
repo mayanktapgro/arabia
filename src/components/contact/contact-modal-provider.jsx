@@ -89,10 +89,10 @@ export function ContactModalProvider({ children }) {
     };
 
     const resetIdleTimer = () => {
-      startIdleTimer();
+      // startIdleTimer();
     };
 
-    startIdleTimer();
+    // startIdleTimer();
 
     window.addEventListener("scroll", resetIdleTimer, { passive: true });
     window.addEventListener("wheel", resetIdleTimer, { passive: true });

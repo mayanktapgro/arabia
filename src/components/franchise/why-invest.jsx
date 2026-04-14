@@ -7,8 +7,8 @@ export function WhyInvest() {
     <Reveal className="mx-auto w-full max-w-[1440px] px-5 py-10 sm:px-8 lg:px-14">
       <SectionHeading
         eyebrow="Why Partner"
-        title="A premium clinic model built around luxury care, scalable systems, and regional demand"
-        description="The opportunity is framed for founders who want brand-led presentation, strong treatment credibility, and a support structure that continues well after launch."
+        title="A luxury-led clinic model built for scale, credibility, and sustained growth"
+        description="For founders who value premium positioning, proven treatment systems, and ongoing strategic support to build a high-performing clinic business."
         tone="light"
       />
 

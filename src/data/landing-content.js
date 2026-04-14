@@ -9,7 +9,7 @@ export const heroSlides = [
       "Science-led skin rejuvenation, warm hospitality, and luminous treatment journeys designed for guests who expect visible refinement.",
     primaryCta: "Book Appointment",
     secondaryCta: "Explore Treatments",
-    backgroundImage: "/profile/intro-pics/slide-3.jpg",
+    backgroundImage: "/arviaData/reception5.jpeg",
     foregroundImage: "/images/hero1.jpeg",
   },
   {
@@ -20,7 +20,7 @@ export const heroSlides = [
       "From smoother skin to brighter tone correction, our laser programs combine performance, comfort, and premium attention at every step.",
     primaryCta: "Book Appointment",
     secondaryCta: "Explore Treatments",
-    backgroundImage: "/profile/intro-pics/palmTree1.png",
+    backgroundImage: "/arviaData/reception5.jpeg",
     foregroundImage: "/images/hair-removal.jpeg",
   },
   {
@@ -31,7 +31,7 @@ export const heroSlides = [
       "Luxury facials, brightening protocols, and anti-aging care tailored for clients who want instant elegance and long-term skin quality.",
     primaryCta: "Book Appointment",
     secondaryCta: "Explore Treatments",
-    backgroundImage: "/profile/intro-pics/slide-2.jpg",
+    backgroundImage: "/arviaData/reception5.jpeg",
     foregroundImage: "/images/hydrafacial.jpeg",
   },
 ];

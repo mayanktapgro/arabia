@@ -158,9 +158,9 @@ export default function AboutSection() {
                     <div className="overflow-hidden rounded-[28px] border border-[rgba(212,175,55,0.18)] bg-white/70 p-3 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
                         <video
                             ref={videoRef}
-                            src="/arviaData/arvia-about.mp4"
+                            src="/arviaData/hero-intro.mp4"
                             autoPlay
-                            muted // required initially for autoplay
+                            muted
                             loop
                             playsInline
                             className="h-full w-full object-cover"
@@ -217,12 +217,12 @@ export default function AboutSection() {
                             </div>
                         ))}
                     </div>
-                    
+
                     <Link href="/about" >
-                       
-                    <button className="premium-button hover:scale-105 mt-6 rounded-full cursor-pointer px-6 py-2 text-sm font-semibold transition hover:bg-[#132855]">
-                        Learn More
-                    </button>
+
+                        <button className="premium-button hover:scale-105 mt-6 rounded-full cursor-pointer px-6 py-2 text-sm font-semibold transition hover:bg-[#132855]">
+                            Learn More
+                        </button>
                     </Link>
                 </motion.div>
             </div>

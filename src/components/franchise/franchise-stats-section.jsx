@@ -48,8 +48,8 @@ export function FranchiseStatsSection() {
     <Reveal className="mx-auto w-full max-w-[1440px] px-5 pb-24 sm:px-8 lg:px-14">
       <SectionHeading
         eyebrow="ROI Highlights"
-        title="Built to create early momentum with premium operational support"
-        description="These numbers frame the opportunity like a polished business proposition: fast-launch energy, targeted ROI, and structured support from day one."
+        title="Engineered for early growth with a premium, high-return model"
+        description="From launch momentum to revenue scalability, every element is designed to support strong returns with expert guidance at every stage."
         tone="light"
       />
 

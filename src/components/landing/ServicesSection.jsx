@@ -33,7 +33,8 @@ export function ServicesSection() {
       <SectionHeading
         eyebrow="Top Services"
         title="Clinically precise, luxuriously calm signature treatments."
-        description="The services carousel now uses one structured treatment dataset, so the homepage, mega menu, and dynamic service pages all stay aligned."
+        description="Experience advanced dermatology treatments delivered with clinical precision and a calming, luxury environment designed for your comfort and results."
+        // description="The services carousel now uses one structured treatment dataset, so the homepage, mega menu, and dynamic service pages all stay aligned."
         tone="dark"
       />
 
@@ -45,7 +46,7 @@ export function ServicesSection() {
               className="min-w-0 flex-[0_0_84%] pl-5 sm:flex-[0_0_48%] lg:flex-[0_0_31%] xl:flex-[0_0_20%]"
             >
               <ServiceCard
-                service={service} 
+                service={service}
                 index={index}
                 showCategory={false}
                 showDescription={false}

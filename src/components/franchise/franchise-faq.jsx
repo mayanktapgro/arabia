@@ -13,8 +13,8 @@ export function FranchiseFaq() {
     <Reveal className="mx-auto w-full max-w-[1440px] px-5 pb-24 sm:px-8 lg:px-14">
       <SectionHeading
         eyebrow="FAQ"
-        title="Key questions answered in a clean commercial format"
-        description="These answers now reflect the updated business pitch, city focus, ROI target, support system, and clinic size range."
+        title="Your questions, clearly answered"
+        description="Find quick, clear answers about our treatments, process, and what you can expect from your experience with us."
         tone="light"
       />
 

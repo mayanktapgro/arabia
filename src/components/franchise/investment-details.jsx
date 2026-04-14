@@ -7,8 +7,8 @@ export function InvestmentDetails() {
     <Reveal className="mx-auto w-full max-w-[1440px] px-5 pb-24 sm:px-8 lg:px-14">
       <SectionHeading
         eyebrow="Business Format"
-        title="Clear positioning for cities, territory, and clinic size"
-        description="The page now presents the business model more like a premium commercial pitch deck, while still keeping the softer homepage aesthetic."
+        title="Strategically designed for premium locations, scalable territories, and optimal clinic formats"
+        description="A clear and structured model that balances strong market positioning with a refined brand experience—built for growth across cities, territories, and clinic sizes."
         tone="light"
       />
 
