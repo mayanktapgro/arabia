@@ -188,7 +188,7 @@ export function ContactModalProvider({ children }) {
       const encodedMessage = encodeURIComponent(message);
 
       // 🔥 Replace with your WhatsApp number
-      const phoneNumber = "919368208014"; // format: countrycode + number
+      const phoneNumber = "917678115756"; // format: countrycode + number
 
       // ✅ Open WhatsApp
       const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;

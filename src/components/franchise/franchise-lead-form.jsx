@@ -29,17 +29,17 @@ export function FranchiseLeadForm() {
     // ✅ WhatsApp Message
     const message = `Hi Arvia Wellness 👋,
 
-I'm interested in Franchise Opportunity.
+    I'm interested in Franchise Opportunity.
 
-👤 Name: ${form.name}
-📞 Phone: ${form.phone}
-📍 City: ${form.location}
+    👤 Name: ${form.name}
+    📞 Phone: ${form.phone}
+    📍 City: ${form.location}
 
-Please share complete franchise details.`;
+    Please share complete franchise details.`;
 
     const encoded = encodeURIComponent(message);
 
-    const phoneNumber = "919368208014"; // your number
+    const phoneNumber = "917678115756"; // your number
 
     const url = `https://wa.me/${phoneNumber}?text=${encoded}`;
 

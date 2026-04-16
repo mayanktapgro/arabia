@@ -36,13 +36,13 @@ export default function ContactPage() {
     const createWhatsAppMessage = () => {
         return `Hi Arvia Wellness 👋,
 
-I’m interested in your services.
+            I’m interested in your services.
 
-👤 Name: ${form.name}
-📞 Phone: ${form.phone}
-📝 Message: ${form.message}
+            👤 Name: ${form.name}
+            📞 Phone: ${form.phone}
+            📝 Message: ${form.message}
 
-Please assist me with consultation.`;
+            Please assist me with consultation.`;
     };
 
     const handleSubmit = (e) => {
@@ -55,7 +55,7 @@ Please assist me with consultation.`;
         const message = createWhatsAppMessage();
         const encodedMessage = encodeURIComponent(message);
 
-        const phoneNumber = "919368208014"; // change if needed
+        const phoneNumber = "917678115756"; // change if needed
         const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
         window.open(url, "_blank");
