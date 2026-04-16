@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Arbia Aesthetics",
+  title: "Arvia Wellness",
   description:
     "Premium skincare, dermatology, and franchise opportunity platform.",
   icons: {
