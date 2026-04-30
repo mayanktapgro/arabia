@@ -36,7 +36,7 @@ export function SectionHeading({
 }) {
   const titleColor = tone === "light" ? "text-white" : "text-[var(--text)]";
   const descriptionColor =
-    tone === "light" ? "text-white/78" : "text-[var(--muted)]";
+    tone === "light" ? "text-white/78" : "text-white";
 
   // CHANGED: eyebrowColor uses English Blue when tone is dark
   const eyebrowColor = tone === "light" ? "text-[#EAC27A]" : "text-[var(--english-blue)]";

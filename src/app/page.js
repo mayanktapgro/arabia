@@ -8,6 +8,8 @@ import { FinalCta } from "@/components/landing/final-cta";
 import { SkeletonBlock } from "@/components/ui/skeleton-block";
 import AboutSection from "@/components/landing/About"
 import WhatsApp from "@/components/landing/WhatsApp";
+import AiSkinAnalysisSection from "@/components/landing/AiSection";
+import FAQSection from "@/components/landing/FAQSection";
 
 const BeforeAfterShowcase = dynamic(
   () =>
@@ -43,11 +45,13 @@ export default function HomePage() {
         <HomeServicesBanner />
         <ServicesSection />
         <AboutSection />
-        <div className="lux-bg">
+        <div className="">
           <BeforeAfterShowcase />
         </div>
+        <AiSkinAnalysisSection />
         <HighDemandSection />
         <Testimonials />
+        <FAQSection />
         <FinalCta />
         <WhatsApp />
       </main>

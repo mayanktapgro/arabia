@@ -10,6 +10,13 @@ export const servicesData = [
     description:
       "Advanced deep cleansing facial using laser technology to purify skin, reduce congestion, and leave the complexion fresher and more refined.",
     menuDescription: "Laser-assisted facial to purify pores and refine oily skin.",
+    machineImage: "/service-details/tattoo-removal-machine.png",
+    machinePoints: [
+      "Breaks down pigment safely using laser pulses",
+      "Targets only ink without harming surrounding skin",
+    ],
+    extendedDescription:
+      "Advanced laser systems break pigment into micro-particles, allowing the body to naturally eliminate them over time while maintaining skin safety.",
     benefits: [
       "Reduces surface oil and congestion",
       "Improves overall skin tone and clarity",
@@ -34,6 +41,14 @@ export const servicesData = [
     description:
       "A doctor-guided facial protocol designed to deeply cleanse, nourish, and restore tired skin while supporting smoother texture and brighter tone.",
     menuDescription: "Clinical glow-focused facial with cleansing and hydration support.",
+    machineImage: "/service-details/hydrafacial-machine.png",
+    machinePoints: [
+      "Deep pore cleansing with vacuum-based extraction",
+      "Instant hydration infusion for glowing skin",
+    ],
+    extendedDescription:
+      "Hydra technology combines cleansing, exfoliation, extraction, and hydration in one seamless process. It enhances skin clarity while delivering essential nutrients deep into the skin.",
+
     benefits: [
       "Improves hydration and softness",
       "Supports brighter and healthier-looking skin",
@@ -58,6 +73,14 @@ export const servicesData = [
     description:
       "A laser-based complexion treatment that targets uneven tone, dullness, and visible pigmentation while helping skin look brighter and clearer.",
     menuDescription: "Light-based complexion refinement for brighter, even-looking skin.",
+    machineImage: "/service-details/diode-machine.jpeg",
+    machinePoints: [
+      "Deep pore cleansing with vacuum-based extraction",
+      "Instant hydration infusion for glowing skin",
+    ],
+    extendedDescription:
+      "Hydra technology combines cleansing, exfoliation, extraction, and hydration in one seamless process. It enhances skin clarity while delivering essential nutrients deep into the skin.",
+
     benefits: [
       "Supports brighter and more even skin tone",
       "Targets visible pigmentation concerns",
@@ -82,6 +105,13 @@ export const servicesData = [
     description:
       "A premium laser hair reduction program designed to target unwanted hair with greater comfort, cleaner routines, and long-term convenience. Sessions are planned around skin tone, treatment area, and hair density so the experience feels safe, structured, and effective.",
     menuDescription: "Comfort-first laser reduction for smoother skin and reduced regrowth.",
+    machineImage: "/service-details/hair-removal-machine.jpeg",
+    machinePoints: [
+      "Precision laser targeting for safe and effective hair reduction",
+      "Advanced cooling system ensures comfort during sessions",
+    ],
+    extendedDescription:
+      "Our laser hair removal system uses advanced wavelength technology to precisely target hair follicles while protecting surrounding skin. This allows faster sessions, better results, and a significantly more comfortable experience compared to traditional methods.",
     benefits: [
       "Helps reduce visible hair regrowth over time",
       "Supports smoother skin with fewer ingrown concerns",
@@ -121,6 +151,13 @@ export const servicesData = [
     description:
       "A non-surgical body tightening treatment using focused ultrasound to support contour definition, firmness, and gradual skin tightening.",
     menuDescription: "Focused ultrasound body tightening with contour-support benefits.",
+    machineImage: "/service-details/hifu-machine.png",
+    machinePoints: [
+      "Focused ultrasound stimulates deep collagen layers",
+      "Non-invasive lifting with zero downtime",
+    ],
+    extendedDescription:
+      "HIFU technology works beneath the skin surface to stimulate collagen production, delivering gradual tightening and lifting without surgery.",
     benefits: [
       "Supports firmer-looking skin",
       "Non-surgical contour enhancement",
@@ -139,7 +176,7 @@ export const servicesData = [
         "Breast Tightening",
         "Full body",
       ]
-    },  
+    },
   },
   {
     title: "Skin Resurfacing and Brightening",
@@ -152,6 +189,13 @@ export const servicesData = [
     description:
       "A resurfacing-focused laser treatment designed to improve textural concerns, acne marks, and the overall smoothness of the skin surface.",
     menuDescription: "Fractional resurfacing for texture correction and smoother skin.",
+    machineImage: "/service-details/co2-machine.png",
+    machinePoints: [
+      "AI-powered skin analysis for precise treatment planning",
+      "Tracks progress and optimizes results over sessions",
+    ],
+    extendedDescription:
+      "AI-driven diagnostics help us understand your skin at a deeper level, allowing highly personalized treatments for better and faster visible results.",
     benefits: [
       "Improves textural irregularity",
       "Helps soften acne and scar concerns",
@@ -176,6 +220,13 @@ export const servicesData = [
     description:
       "A heat-based tightening treatment that helps support collagen response, improve firmness, and create a smoother, more lifted skin appearance.",
     menuDescription: "Radiofrequency therapy for lift, firmness, and skin-quality support.",
+    machineImage: "/service-details/hifu-machine.png",
+    machinePoints: [
+      "Focused ultrasound stimulates deep collagen layers",
+      "Non-invasive lifting with zero downtime",
+    ],
+    extendedDescription:
+      "HIFU technology works beneath the skin surface to stimulate collagen production, delivering gradual tightening and lifting without surgery.",
     benefits: [
       "Supports a firmer appearance",
       "Helps improve softness and elasticity",
@@ -200,6 +251,13 @@ export const servicesData = [
     description:
       "Laser-based tattoo reduction designed to gradually break down pigment while protecting the surrounding skin with carefully planned session spacing.",
     menuDescription: "Progressive laser reduction for unwanted tattoo pigment.",
+    machineImage: "/service-details/tattoo-removal-machine.png",
+    machinePoints: [
+      "Breaks down pigment safely using laser pulses",
+      "Targets only ink without harming surrounding skin",
+    ],
+    extendedDescription:
+      "Advanced laser systems break pigment into micro-particles, allowing the body to naturally eliminate them over time while maintaining skin safety.",
     benefits: [
       "Supports gradual fading of tattoo ink",
       "Suitable for mapped multi-session plans",
@@ -224,6 +282,13 @@ export const servicesData = [
     description:
       "A correction-led treatment pathway focused on improving the appearance of certain scars and birthmarks through planned sessions and technology pairing.",
     menuDescription: "Correction-focused treatment pathway for visible marks and scars.",
+    machineImage: "/service-details/co2-machine.png",
+    machinePoints: [
+      "AI-powered skin analysis for precise treatment planning",
+      "Tracks progress and optimizes results over sessions",
+    ],
+    extendedDescription:
+      "AI-driven diagnostics help us understand your skin at a deeper level, allowing highly personalized treatments for better and faster visible results.",
     benefits: [
       "Supports smoother-looking treated areas",
       "Targets specific scar and birthmark concerns",
@@ -248,6 +313,13 @@ export const servicesData = [
     description:
       "A focused pigmentation treatment plan aimed at reducing visible dark patches, uneven tone, and complexion dullness for clearer-looking skin.",
     menuDescription: "Tone-correction treatment for visible pigmentation and dullness.",
+    machineImage: "/service-details/tattoo-removal-machine.png",
+    machinePoints: [
+      "Breaks down pigment safely using laser pulses",
+      "Targets only ink without harming surrounding skin",
+    ],
+    extendedDescription:
+      "Advanced laser systems break pigment into micro-particles, allowing the body to naturally eliminate them over time while maintaining skin safety.",
     benefits: [
       "Helps reduce visible pigmentation",
       "Supports more even-looking tone",
@@ -272,6 +344,13 @@ export const servicesData = [
     description:
       "A glow-boosting facial that deeply cleanses, hydrates, and refreshes the skin for a plumper, brighter, and more polished finish.",
     menuDescription: "Hydration-rich facial for glow, softness, and refreshed texture.",
+    machineImage: "/service-details/hydrafacial-machine.png",
+    machinePoints: [
+      "Deep pore cleansing with vacuum-based extraction",
+      "Instant hydration infusion for glowing skin",
+    ],
+    extendedDescription:
+      "Hydra technology combines cleansing, exfoliation, extraction, and hydration in one seamless process. It enhances skin clarity while delivering essential nutrients deep into the skin.",
     benefits: [
       "Delivers instant hydration support",
       "Improves skin freshness and softness",
@@ -448,6 +527,13 @@ export const servicesData = [
     description:
       "A skin-resurfacing procedure using controlled exfoliation to improve texture, reduce pigmentation, and enhance skin clarity.",
     menuDescription: "Skin resurfacing peel for tone and texture improvement.",
+    machineImage: "/service-details/hydrafacial-machine.png",
+    machinePoints: [
+      "Deep pore cleansing with vacuum-based extraction",
+      "Instant hydration infusion for glowing skin",
+    ],
+    extendedDescription:
+      "Hydra technology combines cleansing, exfoliation, extraction, and hydration in one seamless process. It enhances skin clarity while delivering essential nutrients deep into the skin.",
     benefits: [
       "Improves skin texture",
       "Reduces pigmentation",

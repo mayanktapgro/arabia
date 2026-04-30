@@ -27,57 +27,92 @@ export default async function ServiceDetailPage({ params }) {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src={service.heroImage}
+            src="/arviaData/reception5.jpeg"
             alt={service.title}
             fill
             priority
             className="object-cover"
           />
-          {/* CHANGED: Swapped beige overlays for a very light English Blue/white gradient */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.96),rgba(240,245,250,0.85),rgba(255,255,255,0.2))]" />
         </div>
 
-        <div className="relative mx-auto grid min-h-[62vh] w-full max-w-[1440px] items-center gap-12 px-5 pb-14 pt-24 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-14">
+        <div className="relative mx-auto grid min-h-[62vh] w-full max-w-[1440px] items-center gap-12 lg:gap-40 px-5 pb-10 pt-4 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-14">
+
+          {/* LEFT CONTENT */}
           <div className="max-w-2xl">
-            {/* Category: Uses the brighter Gold */}
-            <p className="text-sm uppercase tracking-[0.28em] text-[var(--gold)]">
+            <p className="text-xs uppercase tracking-[0.28em] text-[var(--gold)]">
               {service.category}
             </p>
-            {/* Title: Dark Grey/Black */}
-            <h1 className="font-display mt-5 text-5xl leading-[1.04] text-[#111111] sm:text-6xl">
+
+            <h1 className="font-display mt-4 text-xl leading-[1.04] text-[#111111] sm:text-4xl">
               {service.title}
             </h1>
-            {/* Description: Muted Blue-Grey */}
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)]">
+
+            {/* MAIN DESCRIPTION */}
+            <p className="mt-4 max-w-xl text-md leading-8 text-[var(--muted)]">
               {service.description}
             </p>
 
+            {/* ✅ EXTRA DESCRIPTION */}
+            {service.extendedDescription && (
+              <p className="max-w-xl text-sm leading-7 text-[var(--muted)]">
+                {service.extendedDescription}
+              </p>
+            )}
+
+            {/* ✅ MACHINE SECTION */}
+            {service.machineImage && (
+              <div className="mt-4 rounded-2xl border border-[var(--english-blue)]/10 bg-white p-4 shadow-md">
+
+                {/* Badge */}
+                <span className="inline-block mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                  Advanced Technology
+                </span>
+
+                {/* Machine Image */}
+                <div className="flex justify-center">
+                  <Image
+                    src={service.machineImage}
+                    alt="Treatment Machine"
+                    width={260}
+                    height={200}
+                    className="object-contain"
+                  />
+                </div>
+
+                {/* Points */}
+                <div className="mt-4 space-y-2">
+                  {service.machinePoints?.map((point, i) => (
+                    <div key={i} className="flex items-start gap-2 text-sm text-[#334155]">
+                      <span className="mt-[6px] h-2 w-2 rounded-full bg-[var(--gold)]"></span>
+                      <p>{point}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              {/* Primary Button: Bright Gold */}
               <OpenContactButton className="bg-[var(--gold)] hover:bg-[#132855] text-white">
                 Book Consultation
               </OpenContactButton>
-
-              {/* CHANGED: Secondary Button is now English Blue */}
-              {/* <OpenContactButton className="bg-[var(--english-blue)] hover:bg-[#152F47] text-white">
-                Learn More
-              </OpenContactButton> */}
             </div>
           </div>
 
-          {/* CHANGED: Main Image Card: Swapped dark bg for White with English Blue border */}
-          <div className="overflow-hidden rounded-[24px] border border-[var(--english-blue)]/20 bg-white p-3 shadow-2xl shadow-[var(--english-blue)]/5">
-            <div className="relative overflow-hidden rounded-[20px]">
+          {/* RIGHT IMAGE */}
+          <div className="lg:absolute lg:top-30 lg:right-50 bg-white p-1  overflow-hidden rounded-[24px] w-[300px]">
+            <div className="relative overflow-hidden rounded-2xl rounded-[20px]">
               <Image
                 src={service.image}
                 alt={service.title}
                 width={920}
                 height={980}
                 priority
-                className="h-[320px] w-full object-cover sm:h-[400px] lg:h-[480px]"
+                className="h-[320px] rounded-2xl w-full object-cover sm:h-[400px] lg:h-[450px]"
               />
             </div>
           </div>
+
         </div>
       </section>
 

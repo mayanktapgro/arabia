@@ -58,8 +58,8 @@ export function SiteFooter() {
 
         {/* LEFT */}
         <div>
-          <p className="font-display text-3xl text-white">
-            <img src="/arviaData/arvia-logo-new.png" alt="Arvia Wellness" className="h-12 w-12 inline-block mr-3" />
+          <p className="font-display text-2xl text-white">
+            <img src="/arviaData/arvia-golden-logo.jpeg" alt="Arvia Wellness" className="h-18 w-18 rounded-xl inline-block mr-3" />
             Arvia Wellness
           </p>
 

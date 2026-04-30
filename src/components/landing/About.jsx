@@ -141,7 +141,7 @@ export default function AboutSection() {
     return (
         <section
             ref={sectionRef}
-            className="relative overflow-hidden bg-[linear-gradient(180deg,#F5F3EF_0%,#E8E2DA_100%)] py-10"
+            className="relative overflow-hidden py-10"
         >
             <div className="pointer-events-none absolute -left-20 -top-20 h-[300px] w-[300px] rounded-full bg-[#D4AF37]/12 blur-3xl" />
             <div className="pointer-events-none absolute bottom-0 right-0 h-[250px] w-[250px] rounded-full bg-[#132855]/10 blur-3xl" />
@@ -177,7 +177,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <p className="text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
+                    <p className="text-sm uppercase tracking-[0.3em] text-[var(--english-bluea)]">
                         About Us
                     </p>
 
@@ -220,7 +220,7 @@ export default function AboutSection() {
 
                     <Link href="/about" >
 
-                        <button className="premium-button hover:scale-105 mt-6 rounded-full cursor-pointer px-6 py-2 text-sm font-semibold transition hover:bg-[#132855]">
+                        <button className="text-white hover:scale-105 mt-6 rounded-full cursor-pointer px-6 py-2 text-sm font-semibold transition bg-[#132855]">
                             Learn More
                         </button>
                     </Link>

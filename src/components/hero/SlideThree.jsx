@@ -12,7 +12,7 @@ const requirements = [
 
 export function SlideThree() {
   return (
-    <div className="grid min-h-[calc(100svh-5rem)] items-center gap-8 px-5 py-20 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-14">
+    <div className="grid min-h-[calc(100svh-5rem)] items-center gap-8 px-5 py-8 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-14">
       <motion.div
         initial={{ opacity: 0, x: -28 }}
         animate={{ opacity: 1, x: 0 }}
@@ -25,17 +25,17 @@ export function SlideThree() {
         <h2 className="font-display mt-4 text-4xl leading-tight text-[#F5F2EC] sm:text-5xl lg:text-[3.35rem]">
           Start Your Own Aesthetic Clinic
         </h2>
-        <p className="mt-4 text-lg leading-7 text-[#B8AFA3]">
+        <p className="mt-4 text-lg leading-7 text-[#fff]">
           Join Arvia Wellness Franchise Network
         </p>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {requirements.map((item) => (
-            <div key={item} className="rounded-[22px] border border-[rgba(201,166,70,0.2)] bg-white/10 p-5 backdrop-blur-md">
+            <div key={item} className="rounded-[22px] border border-[rgba(201,166,70,0.2)] bg-[var(--english-blue)] p-5 backdrop-blur-md">
               <p className="text-base leading-7 text-white">{item}</p>
             </div>
           ))}
         </div>
-        <div className="mt-4 rounded-[20px] border border-[rgba(201,166,70,0.18)] bg-white/10 px-5 py-4 text-sm leading-7 text-white/82 backdrop-blur-md">
+        <div className="mt-4 rounded-[20px] border border-[rgba(201,166,70,0.18)] bg-[var(--english-blue)] px-5 py-4 text-sm leading-7 text-white/82 backdrop-blur-md">
           End-to-end support, staff training, launch planning, and AI-led marketing systems are built into the model.
         </div>
         <Button href="/franchise#franchise-form" className="premium-button mt-6 hover:bg-[#B8962E]">

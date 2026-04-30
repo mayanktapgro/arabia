@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 export function HeroSlider() {
   const autoplay = useRef(
     Autoplay({
-      delay: 6000,
+      delay: 4500,
       stopOnInteraction: false,
       stopOnMouseEnter: false,
     })
@@ -98,11 +98,12 @@ export function HeroSlider() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(245,242,236,0.40),rgba(245,242,236,0.5))]" />
+                <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(19,40,85,0.9),rgba(19,40,85,0.6),transparent)]" />
+                {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(245,242,236,0.40),rgba(245,242,236,0.5))]" /> */}
               </div>
 
               {/* Content */}
-              <div className="relative z-20 mx-auto grid h-full max-w-[1300px] items-center gap-6 px-6 py-12 lg:grid-cols-2">
+              <div className="relative z-20 mx-auto grid h-[600px] max-w-7xl  items-center gap-6 px-6 pb-6 lg:grid-cols-[0.8fr_1.2fr]">
 
                 {/* LEFT TEXT */}
                 <motion.div
@@ -114,26 +115,26 @@ export function HeroSlider() {
                     {slide.eyebrow}
                   </p>
 
-                  <h2 className="mt-3 text-2xl sm:text-3xl font-display text-[#2C2C2C] leading-tight">
+                  <h2 className="mt-3 text-2xl sm:text-4xl font-display text-[#fff] leading-tight">
                     {slide.title}
                   </h2>
 
-                  <p className="mt-3 text-sm leading-6 text-[#000000]/80">
+                  <p className="mt-3 text-md leading-6 text-[#fff]/90">
                     {slide.description}
                   </p>
 
-                  <div className="mt-5 flex flex-wrap gap-3">
+                  <div className="mt-10 flex flex-wrap gap-3">
                     <OpenContactButton className="bg-[#C9A646] hover:bg-[#132855] px-5 py-2 text-sm">
                       {slide.primaryCta}
                     </OpenContactButton>
 
-                    <Button
+                    {/* <button
                       href={slide?.secondaryHref || "#services"}
                       variant="secondary"
-                      className="text-sm hover:scale-105"
+                      className="text-sm border border-[var(--gold)] cursor-pointer rounded-full px-3 hover:scale-105 text-white"
                     >
                       {slide.secondaryCta}
-                    </Button>
+                    </button> */}
                   </div>
                 </motion.div>
 
@@ -147,7 +148,7 @@ export function HeroSlider() {
                     <Image
                       src={slide.foregroundImage}
                       alt={slide.title}
-                      width={700}
+                      width={900}
                       height={800}
                       className="h-[420px] sm:h-[480px] w-full object-cover"
                     />

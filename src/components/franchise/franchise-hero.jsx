@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 import { franchiseExpansion, franchiseHighlights } from "@/data/franchise-content";
+import { OpenFranchiseModal } from "./OpenFranchiseModal";
 
 export function FranchiseHero() {
   return (
@@ -21,12 +22,19 @@ export function FranchiseHero() {
             <p className="mt-6 max-w-2xl text-sm leading-8 text-white/78">
               {franchiseExpansion.description}
             </p>
-            <Button
+
+            <OpenFranchiseModal>
+              <button className="bg-[#C9A646] px-5 py-2 cursor-pointer hover:scale-105 mt-2 rounded-full text-white">
+                Apply Now
+              </button>
+            </OpenFranchiseModal>
+
+            {/* <Button
               href="#franchise-form"
               className="premium-button mt-8 hover:bg-[#B8962E]"
             >
               Apply Now
-            </Button>
+            </Button> */}
 
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
               {franchiseHighlights.map((item) => (
@@ -47,7 +55,7 @@ export function FranchiseHero() {
 
           <div className="overflow-hidden rounded-[28px] h-[500px] border border-[rgba(255,255,255,0.12)] bg-white/10 p-3 backdrop-blur-md">
             <Image
-              src="/images/franchise.png"
+              src="/arviaData/franchise.jpeg"
               alt="Premium skin clinic franchise visual"
               width={1100}
               height={1100}

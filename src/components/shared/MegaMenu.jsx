@@ -5,16 +5,28 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { serviceCategories, servicesData } from "@/data/servicesData";
 
-export function MegaMenu({ isOpen, handleClose, isScrolled, onMouseEnter, onMouseLeave }) {
+export function MegaMenu({ isOpen, handleClose, isScrolled, onMouseEnter, onMouseLeave, isActive }) {
+  const navLinkClass = (isActive) =>
+    `relative text-lg font-bold text-[var(--gold)] transition hover:scale-105
+   after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-[var(--gold)]
+   after:transition-all after:duration-300  
+   ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"}`;
   return (
     <div className="relative" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-      <button
-        type="button"
-        className={`flex items-center gap-2 brightness-135 cursor-pointer text-sm transition font-extrabold text-[var(--gold)]`}
-      >
-        Services
-        <span className={`text-xs ${isScrolled ? "text-[#C9A646]" : "text-[#EAC27A]"}`}>+</span>
-      </button>
+      <Link
+        href="/services"
+        onClick={handleClose}
+        // type="button"
+        // className={`flex items-center gap-2 brightness-135 cursor-pointer text-lg transition font-extrabold text-[var(--gold)]`}
+        >
+
+        <span
+        className={navLinkClass(isActive)}
+          // className={`text-xs ${isScrolled ? "text-[#C9A646]" : "text-[#EAC27A]"}`}
+        >
+          Services +
+        </span>
+      </Link>
 
       <AnimatePresence>
         {isOpen ? (

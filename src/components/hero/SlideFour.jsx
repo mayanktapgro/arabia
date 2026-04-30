@@ -22,7 +22,7 @@ export function SlideFour() {
   );
 
   return (
-    <div className="grid min-h-[calc(100svh-5rem)] items-center gap-8 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-14">
+    <div className="grid min-h-[calc(100svh-5rem)] items-center gap-8 px-5 py-8 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-14">
       <motion.div
         initial={{ opacity: 0, x: -28 }}
         animate={{ opacity: 1, x: 0 }}

@@ -39,7 +39,7 @@ export function Testimonials() {
       />
 
       <div className="mt-10 overflow-hidden" ref={emblaRef}>
-        <div className="-ml-5 flex">
+        <div className=" px-8 flex">
           {testimonials.map((item, index) => (
             <div
               key={`${item.name}-${item.treatment}`}

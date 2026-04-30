@@ -8,12 +8,13 @@ import { OpenContactButton } from "@/components/contact/open-contact-button";
 import { MegaMenu } from "@/components/shared/MegaMenu";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { OpenFranchiseModal } from "../franchise/OpenFranchiseModal";
 
 const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  // { label: "Home", href: "/" },
+  // { label: "About Us", href: "/about" },
   { label: "Franchise", href: "/franchise" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function SiteNavbar() {
@@ -22,6 +23,11 @@ export function SiteNavbar() {
     pathname !== "/" && pathname !== "/franchise"
   );
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+
+  const isActive = (href) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   // ✅ MOBILE MENU STATE
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -63,18 +69,24 @@ export function SiteNavbar() {
 
   const isFranchise = pathname === "/franchise";
 
+  const navLinkClass = (href) =>
+    `relative text-lg font-bold text-[var(--gold)] transition hover:scale-105
+   after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-[var(--gold)]
+   after:transition-all after:duration-300
+   ${isActive(href) ? "after:w-full" : "after:w-0 hover:after:w-full"}`;
+
   return (
-    <header className="sticky top-0 z-[90] bg-[var(--english-blue)]/80 shadow-sm">
+    <header className="sticky top-0 z-[90] bg-[var(--english-blue)] shadow-sm">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
 
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/arviaData/arvia-logo-new.png"
+            src="/arviaData/arvia-golden-logo.jpeg"
             alt="Arvia Wellness Logo"
             width={55}
             height={55}
-            className="rounded-xl border brightness-300 border-[rgba(201,166,70,0.2)]"
+            className="rounded-xl border border-[rgba(201,166,70,0.2)]"
           />
           <div>
             <p className={`font-bold text-2xl brightness-120 text-[var(--gold)]`}>
@@ -86,23 +98,47 @@ export function SiteNavbar() {
           </div>
         </Link>
 
+
         {/* DESKTOP NAV */}
         <nav className="hidden items-center gap-6 lg:flex">
+          <Link
+            href={'/'}
+          >
+            <span
+              className={navLinkClass("/")}
+            // className={`text-lg hover:scale-105 transition brightness-115 font-bold text-[var(--gold)]`}
+            >
+              Home
+            </span>
+          </Link>
+          <Link
+            href={'/about'}
+          >
+            <span
+              className={navLinkClass("/about")}
+            // className={`text-lg hover:scale-105 transition brightness-115 font-bold text-[var(--gold)]`}
+            >
+              About Us
+            </span>
+          </Link>
           <MegaMenu
             isOpen={isMegaMenuOpen}
             handleClose={() => setIsMegaMenuOpen(false)}
             isScrolled={isScrolled}
             onMouseEnter={() => setIsMegaMenuOpen(true)}
             onMouseLeave={() => setIsMegaMenuOpen(false)}
+            isActive={pathname.startsWith("/services")}
           />
 
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={`hover:scale-105 transition`}
             >
-              <span className={`text-sm hover:scale-105 transition brightness-115 font-bold text-[var(--gold)]`}>
+              <span
+                className={navLinkClass(item.href)}
+              // className={`text-lg hover:scale-105 transition brightness-115 font-bold text-[var(--gold)]`}
+              >
                 {item.label}
               </span>
             </Link>
@@ -112,9 +148,11 @@ export function SiteNavbar() {
         {/* DESKTOP CTA */}
         <div className="hidden lg:block">
           {pathname === "/franchise" ? (
-            <Button href="#franchise-form" className="hidden sm:inline-flex">
-              Apply for Franchise
-            </Button>
+            <OpenFranchiseModal>
+              <Button  className="hidden sm:inline-flex">
+                Apply for Franchise
+              </Button>
+            </OpenFranchiseModal>
           ) : (
             <OpenContactButton className="hidden sm:inline-flex">
               Book Consultation

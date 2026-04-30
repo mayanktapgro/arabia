@@ -71,7 +71,7 @@ export default function ContactPage() {
             <section className="relative overflow-hidden py-10 text-center">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(234,194,122,0.12),transparent_30%)]" />
                 <div className="relative mx-auto max-w-4xl px-4">
-                    <p className="text-xs uppercase tracking-[0.3em] text-[#C9A646]">
+                    <p className="text-xs uppercase font-bold tracking-[0.3em] text-[var(--english-blue)]">
                         Contact Us
                     </p>
                     <h1 className="font-display mt-4 text-4xl sm:text-5xl">

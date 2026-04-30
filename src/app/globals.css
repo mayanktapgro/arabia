@@ -75,7 +75,12 @@ select {
   background:
     radial-gradient(circle at top left, rgba(234, 194, 122, 0.12), transparent 20%),
     radial-gradient(circle at bottom right, rgba(31, 58, 95, 0.05), transparent 18%),
-    linear-gradient(180deg, #f7f3ee, #f3ede5 46%, #ede6dc 100%);
+    linear-gradient(135deg,
+      #F2E2A2 0%,
+      #E5C76B 35%,
+      #D4AF37 70%,
+      #B68A2E 100%)
+    /* linear-gradient(180deg, #f7f3ee, #f3ede5 46%, #ede6dc 100%); */
 }
 
 .lux-card {

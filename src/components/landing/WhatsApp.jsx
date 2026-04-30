@@ -1,35 +1,59 @@
 "use client";
 
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsApp = () => {
     const phoneNumber = "+917678115756";
-    const message = "Hi, I want to inquire about your services at Arvia.";
+    const cleanNumber = phoneNumber.replace("+", "");
 
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const message =
+        "Hi, I want to inquire about your services at Arvia.";
+
+    const whatsappUrl = `https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`;
 
     return (
-        <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="fixed bottom-6 right-6 z-[1000]"
-        >
-            <div className="relative flex items-center justify-center">
+        <div className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-[1000] flex flex-col items-center gap-4">
 
-                {/* Pulse Animation */}
-                <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-70 animate-ping"></span>
+            {/* CALL BUTTON */}
+            <a
+                href={`tel:${phoneNumber}`}
+                aria-label="Call Arvia Wellness"
+                className="relative group"
+            >
+                <div className="relative flex items-center justify-center">
 
-                {/* Main Button */}
-                <div className="relative flex items-center justify-center h-14 w-14 rounded-full bg-green-500 text-white shadow-xl hover:scale-105 transition">
+                    {/* Pulse */}
+                    <span className="absolute h-full w-full rounded-full bg-[#C9A646]/60 animate-ping"></span>
 
-                    {/* WhatsApp Icon */}
-                    <FaWhatsapp size={30} />
-
+                    {/* Button */}
+                    <div className="relative flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#132855] text-white shadow-xl transition hover:scale-105">
+                        <Phone size={22} className="sm:h-6 sm:w-6" />
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+
+            {/* WHATSAPP BUTTON */}
+            <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat on WhatsApp"
+                className="relative group"
+            >
+                <div className="relative flex items-center justify-center">
+
+                    {/* Pulse */}
+                    <span className="absolute h-full w-full rounded-full bg-green-400 opacity-70 animate-ping"></span>
+
+                    {/* Button */}
+                    <div className="relative flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-xl transition hover:scale-105">
+                        <FaWhatsapp size={30} className="sm:text-[34px]" />
+                    </div>
+                </div>
+            </a>
+
+        </div>
     );
 };
 

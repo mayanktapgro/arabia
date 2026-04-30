@@ -3,6 +3,7 @@ import { ContactModalProvider } from "@/components/contact/contact-modal-provide
 import "./globals.css";
 import { SiteNavbar } from "@/components/shared/site-navbar";
 import { SiteFooter } from "@/components/shared/site-footer";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 
 const cairo = Cairo({
   variable: "--font-cairo",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
       <body className={`${cairo.variable} ${playfair.variable}`}>
         <ContactModalProvider>
           <SiteNavbar />
+          <Breadcrumb />
           <div id="top">{children}</div>
           <SiteFooter />
         </ContactModalProvider>

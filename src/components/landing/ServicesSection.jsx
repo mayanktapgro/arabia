@@ -28,7 +28,7 @@ export function ServicesSection() {
   return (
     <Reveal
       id="services"
-      className=" w-full max-w-full bg-gradient-to-br from-[#FFF8EB] via-[#F5EAD7] to-[#EAC27A]/30 rounded px-5 py-8 sm:px-8 lg:px-14"
+      className=" w-full max-w-full rounded px-5 py-8 sm:px-8 lg:px-14"
     >
       <SectionHeading
         eyebrow="Top Services"
