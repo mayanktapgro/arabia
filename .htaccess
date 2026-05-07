@@ -1,0 +1,22 @@
+RewriteEngine On
+RewriteBase /
+DirectoryIndex index.html
+
+# Always serve Next.js build assets directly.
+RewriteRule ^_next/?$ / [R=302,L]
+RewriteRule ^_next/ - [L]
+
+# Always serve static files directly.
+RewriteRule ^(.*)\.(css|js|mjs|json|txt|xml|jpg|jpeg|png|gif|svg|webp|ico|woff2?|ttf|eot|map)$ - [L,NC]
+
+# If file or directory exists, serve it as-is.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Serve exported HTML files without extension.
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# Fallback to SPA entry point.
+RewriteRule ^ index.html [L]
