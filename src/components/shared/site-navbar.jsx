@@ -149,7 +149,7 @@ export function SiteNavbar() {
         <div className="hidden lg:block">
           {pathname === "/franchise" ? (
             <OpenFranchiseModal>
-              <Button  className="hidden sm:inline-flex">
+              <Button className="hidden sm:inline-flex">
                 Apply for Franchise
               </Button>
             </OpenFranchiseModal>
@@ -177,12 +177,16 @@ export function SiteNavbar() {
             Home
           </Link>
 
+          <Link href="/about" onClick={() => setIsMobileOpen(false)} className="block text-lg font-medium text-[#2C2C2C]">
+            About Us
+          </Link>
+
           <Link href="/services" onClick={() => setIsMobileOpen(false)} className="block text-lg font-medium text-[#2C2C2C]">
             Services
           </Link>
 
-          <Link href="/about" onClick={() => setIsMobileOpen(false)} className="block text-lg font-medium text-[#2C2C2C]">
-            About
+          <Link href="/franchise" onClick={() => setIsMobileOpen(false)} className="block text-lg font-medium text-[#2C2C2C]">
+            Franchise
           </Link>
 
           <Link href="/contact" onClick={() => setIsMobileOpen(false)} className="block text-lg font-medium text-[#2C2C2C]">
