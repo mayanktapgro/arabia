@@ -55,7 +55,7 @@ export function SlideOne({ isActive }) {
   };
 
   return (
-    <section className="relative h-[100svh] w-full overflow-hidden">
+    <section className="relative h-[110vh] lg:h-[100svh] w-full overflow-hidden">
 
       {/* VIDEO */}
       <video
@@ -70,7 +70,7 @@ export function SlideOne({ isActive }) {
       {/* SOUND BUTTON */}
       <button
         onClick={enableSound}
-        className="absolute bottom-26 left-6 z-20 cursor-pointer bg-black/50 text-white px-4 py-2 rounded-full backdrop-blur"
+        className="absolute bottom-6 lg:bottom-26 left-6 z-20 cursor-pointer bg-black/50 text-white px-4 py-2 rounded-full backdrop-blur"
       >
         🔊 Enable Sound
       </button>

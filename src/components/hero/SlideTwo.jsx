@@ -49,7 +49,7 @@ export function SlideTwo() {
         initial={{ opacity: 0, x: -28 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative"
+        className="relative hidden lg:block"
       >
         <div className="overflow-hidden rounded-[34px] border border-white/18 bg-white/12 p-3 shadow-[0_24px_60px_rgba(15,23,42,0.22)] backdrop-blur-md">
           <div className="relative overflow-hidden rounded-[28px]">
