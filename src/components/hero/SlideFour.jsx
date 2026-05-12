@@ -80,7 +80,7 @@ export function SlideFour() {
           loop
           muted
           playsInline
-          className="h-[300px] w-full rounded-[24px] object-cover sm:h-[380px] lg:h-[430px]"
+          className="h-[420px] w-full rounded-[24px] object-cover sm:h-[380px] lg:h-[430px]"
         />
 
       </div>
