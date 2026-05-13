@@ -181,21 +181,21 @@ export function ContactModalProvider({ children }) {
     setFeedback("");
 
     try {
-      // ✅ Create WhatsApp message
+      // -Create WhatsApp message
       const message = createWhatsAppMessage();
       console.log('whatsapp message', message)
-      // ✅ Encode message
+      // -Encode message
       const encodedMessage = encodeURIComponent(message);
 
       // 🔥 Replace with your WhatsApp number
       const phoneNumber = "917678115756"; // format: countrycode + number
 
-      // ✅ Open WhatsApp
+      // -Open WhatsApp
       const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
       window.open(whatsappURL, "_blank");
 
-      // ✅ OPTIONAL: also save in backend
+      // -OPTIONAL: also save in backend
       // await fetch("/api/contact", {
       //   method: "POST",
       //   headers: {

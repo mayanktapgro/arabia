@@ -29,7 +29,7 @@ export function SiteNavbar() {
     return pathname.startsWith(href);
   };
 
-  // ✅ MOBILE MENU STATE
+  // -MOBILE MENU STATE
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const heroId = useMemo(() => {
@@ -160,7 +160,7 @@ export function SiteNavbar() {
           )}
         </div>
 
-        {/* ✅ MOBILE HAMBURGER */}
+        {/* -MOBILE HAMBURGER */}
         <button
           className="lg:hidden text-[#C9A646]"
           onClick={() => setIsMobileOpen(!isMobileOpen)}
@@ -169,7 +169,7 @@ export function SiteNavbar() {
         </button>
       </div>
 
-      {/* ✅ MOBILE MENU */}
+      {/* -MOBILE MENU */}
       {isMobileOpen && (
         <div className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-[rgba(201,166,70,0.2)] px-6 py-6 space-y-5">
 

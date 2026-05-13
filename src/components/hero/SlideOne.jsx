@@ -230,7 +230,7 @@ export function SlideOne({ isActive }) {
 //   return (
 //     <section className="relative h-[100svh] w-full overflow-hidden">
 
-//       {/* ✅ BACKGROUND VIDEO */}
+//       {/* -BACKGROUND VIDEO */}
 //       <video
 //         src="/arviaData/hero-intro.mp4"
 //         autoPlay
@@ -240,13 +240,13 @@ export function SlideOne({ isActive }) {
 //         className="absolute inset-0 h-full w-full object-cover"
 //       />
 
-//       {/* ✅ DARK + GOLD OVERLAY */}
+//       {/* -DARK + GOLD OVERLAY */}
 //       <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(0,0,0,0.75),rgba(19,40,85,0.6),rgba(0,0,0,0.7))]" />
 
 //       {/* GOLD GLOW */}
 //       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(234,194,122,0.25),transparent_40%)]" />
 
-//       {/* ✅ CONTENT */}
+//       {/* -CONTENT */}
 //       <div className="relative z-10 flex h-full items-center justify-center px-6 text-center">
 //         <motion.div
 //           initial={{ opacity: 0, y: 40 }}

@@ -24,7 +24,7 @@ export function Button({
 
   const classes = `${base} ${styles[variant]} ${className}`;
 
-  // ✅ AUTO DECISION
+  // -AUTO DECISION
   if (as === "button" || !href) {
     return (
       <button className={classes} {...props}>

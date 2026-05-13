@@ -26,7 +26,7 @@ export function FranchiseLeadForm() {
   const handleSubmit = () => {
     if (!validateForm()) return;
 
-    // ✅ WhatsApp Message
+    // -WhatsApp Message
     const message = `Hi Arvia Wellness 👋,
 
     I'm interested in Franchise Opportunity.

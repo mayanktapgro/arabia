@@ -53,14 +53,14 @@ export default async function ServiceDetailPage({ params }) {
               {service.description}
             </p>
 
-            {/* ✅ EXTRA DESCRIPTION */}
+            {/* -EXTRA DESCRIPTION */}
             {service.extendedDescription && (
               <p className="max-w-xl text-sm leading-7 text-[var(--muted)]">
                 {service.extendedDescription}
               </p>
             )}
 
-            {/* ✅ MACHINE SECTION */}
+            {/* -MACHINE SECTION */}
             {service.machineImage && (
               <div className="mt-4 rounded-2xl border border-[var(--english-blue)]/10 bg-white p-4 shadow-md">
 
@@ -230,10 +230,10 @@ export default async function ServiceDetailPage({ params }) {
 
           <div className="relative max-w-6xl mx-auto">
 
-            {/* ✅ LINE aligned to cards width */}
+            {/* -LINE aligned to cards width */}
             <div className="absolute inset-x-0 top-8 z-0 hidden h-[2px] bg-gradient-to-r from-[var(--gold)]/40 via-[var(--gold)] to-[var(--gold)]/40 lg:block" />
 
-            {/* ✅ CARDS */}
+            {/* -CARDS */}
             <div className={`grid gap-6 lg:grid-cols-${service.steps.length}`}>
               {service.steps.map((step, index) => (
                 <article

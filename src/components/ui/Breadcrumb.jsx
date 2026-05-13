@@ -20,7 +20,7 @@ export default function Breadcrumb() {
 
         let label = capitalize(segment);
 
-        // ✅ Replace slug with actual service title
+        // -Replace slug with actual service title
         if (pathSegments[0] === "services" && index === 1) {
             const service = getServiceBySlug(segment);
             if (service) label = service.title;
