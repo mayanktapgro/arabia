@@ -37,7 +37,7 @@ export default function AboutPage() {
             <section className="mx-auto grid max-w-7xl gap-10 px-4 py-4 lg:grid-cols-2">
                 <div>
                     <h2 className="font-display text-3xl">A Modern Approach to Skin & Wellness</h2>
-                    <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
+                    {/* <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
                         Our brand Arvia Wellness has established itself as a trusted name in Dubai’s highly competitive beauty and wellness market. We specialize in laser hair removal, skin rejuvenation, and advanced aesthetic treatments using FDA-approved technologies and internationally trained professionals.
                     </p>
                     <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
@@ -45,6 +45,12 @@ export default function AboutPage() {
                     </p>
                     <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
                         Dubai-based laser beauty clinic chain, known for advanced technology, luxury service standards.
+                    </p> */}
+                    <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
+                        Arvia Wellness is a trusted wellness and beauty brand dedicated to delivering premium self-care experiences with a focus on quality, comfort, and customer satisfaction. Our services include professional beauty treatments, skincare solutions, wellness therapies, and personalized grooming services designed to help clients look and feel their best.
+                        With a commitment to expert care and premium products, Arvia Wellness combines modern wellness practices with personalized attention to create a relaxing and rejuvenating experience for every customer. We proudly serve clients across Faridabad, Gurgaon, Delhi, and Noida through our professional and customer-centric approach.
+                        At Arvia Wellness, we believe wellness is more than just beauty — it is confidence, self-care, and a healthy lifestyle. Our mission is to make high-quality wellness services accessible, convenient, and effective while maintaining the highest standards of professionalism and hygiene.
+                        Driven by innovation, customer trust, and excellence in service, Arvia Wellness continues to grow as a preferred destination for beauty, wellness, and holistic care.
                     </p>
                 </div>
 
