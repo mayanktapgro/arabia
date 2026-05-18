@@ -11,6 +11,7 @@ export default function ContactPage() {
 
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
+    const [consent, setConsent] = useState(false);
 
     const handleChange = (field, value) => {
         setForm((prev) => ({ ...prev, [field]: value }));
@@ -29,10 +30,13 @@ export default function ContactPage() {
 
         if (!form.message.trim()) newErrors.message = "Message is required";
 
+        if (!consent) {
+            newErrors.consent = "Please agree to receive communication";
+        }
+
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
-
     const createWhatsAppMessage = () => {
         return `Hi Arvia Wellness 👋,
 
@@ -161,6 +165,23 @@ export default function ContactPage() {
                                 <p className="text-xs mt-1 text-red-500">{errors.message}</p>
                             )}
                         </div>
+                        {/* CONSENT CHECKBOX */}
+                        <div className="flex items-start gap-3">
+                            <input
+                                type="checkbox"
+                                checked={consent}
+                                onChange={(e) => setConsent(e.target.checked)}
+                                className="mt-1 h-4 w-4 accent-[var(--gold)]"
+                            />
+
+                            <p className="text-xs leading-5">
+                                I agree to receive message for communication via RCS/SMS/WhatsApp.
+                            </p>
+                        </div>
+
+                        {errors.consent && (
+                            <p className="text-xs text-red-500">{errors.consent}</p>
+                        )}
 
                         {/* BUTTON */}
                         <button

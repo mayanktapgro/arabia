@@ -9,6 +9,7 @@ const footerLinks = {
     { label: "About Us", href: "/about" },
     { label: "Contact Us", href: "/contact" },
     { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms & Conditions", href: "/terms-and-conditions" },
   ],
   Treatments: [
     { label: "Carbon Facial", slug: "carbon-facial" },
